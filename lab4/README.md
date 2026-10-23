@@ -11,3 +11,4 @@
 - **Dependency layer:** Yes, in the slim image only.
 - **.dockerignore:** It kept .git, .github, __pycache__/, *.pyc, .pytest_cache/, evidence/, *.png, *.md, and Dockerfile* out of the build context.
 
+
