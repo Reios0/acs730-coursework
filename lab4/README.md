@@ -21,3 +21,10 @@
 
 - **pip cache:** Not worth it. The cache hit saved 2s but it took 1s longer to setup Python.
 - **docker cache:** Not worth it. The cache hit made the build faster but it took more time overall to set up the build and performing post run operations.
+
+## Composite action vs. Reusable workflow
+
+- **Composite (python-deps):** The dependency setup is a few steps that have to run on the same runner as pytest inside the test job, so it is packaged as an action that runs
+as steps within a job I already have.
+- **Reusable (docker-build):** The image build is a whole job with its own runner that needs write access which the test job does not, so it is packaged as a workflow where
+the permission is granted only to the image job.
