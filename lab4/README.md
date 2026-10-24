@@ -11,3 +11,13 @@
 - **Dependency layer:** Yes, in the slim image only.
 - **.dockerignore:** It kept .git, .github, __pycache__/, *.pyc, .pytest_cache/, evidence/, *.png, *.md, and Dockerfile* out of the build context.
 
+## CI timings
+
+| Measurement                  | Baseline | Cache miss | Cache hit | Worth it? |
+|------------------------------|----------|------------|-----------|-----------|
+| pip install step             |    3s    |     3s     |    1s     |    No     |
+| docker build step            |    8s    |    14s     |    1s     |    No     |
+| Whole workflow (wall clock)  |   53s    |  1min 15s  |  1min 2s  |    No     |
+
+- **pip cache:** Not worth it. The cache hit saved 2s but it took 1s longer to setup Python.
+- **docker cache:** Not worth it. The cache hit made the build faster but it took more time overall to set up the build and performing post run operations.
