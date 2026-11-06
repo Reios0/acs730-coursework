@@ -180,7 +180,7 @@ resource "aws_security_group" "web" {
   vpc_id      = aws_vpc.main.id
 
   dynamic "ingress" {
-    for_each = var.ingress_port
+    for_each = var.ingress_ports
 
     content {
       description = "Inbound TCP ${ingress.value}"
