@@ -1,91 +1,113 @@
 #!/usr/bin/env bash
 #
-# cleanup-check.sh -- your $50 budget guard. Lists everything in the account
-# that is (or will keep) costing money, so nothing is forgotten after a lab.
-# READ-ONLY: this script deletes nothing; it tells you what to delete and how.
+# cleanup-check.sh
 #
-# Run at the end of every lab session:
-#   ./scripts/cleanup-check.sh
+# A read-only audit of everything still costing money in your AWS Academy
+# account, against the fixed $50 you get for the whole term.
 #
+# It DELETES NOTHING. It tells you what is there and prints the command
+# that would remove each item, so that you decide.
+#
+# Run it at the end of every session. The most common way to run out of
+# budget is an instance from three weeks ago that nobody looked at again.
+#
+# Usage:  ./scripts/cleanup-check.sh
+
 set -uo pipefail
-R="us-east-1"
+
+if ! command -v aws >/dev/null 2>&1; then
+  echo "The AWS CLI is not installed. Are you on the workstation?" >&2
+  exit 1
+fi
+
+if ! aws sts get-caller-identity >/dev/null 2>&1; then
+  echo "AWS credentials are not working. Click Start Lab on Vocareum and retry." >&2
+  exit 1
+fi
+
 FOUND=0
+hdr() { echo ""; echo "== $*"; }
+item() { echo "   $*"; FOUND=$((FOUND+1)); }
+cmd()  { echo "      -> $*"; }
 
-section() { echo -e "\n=== $* ==="; }
-
-section "EC2 instances (workstation is expected; anything else should usually be gone)"
-aws ec2 describe-instances --region "$R" \
-  --filters "Name=instance-state-name,Values=pending,running,stopping,stopped" \
-  --query 'Reservations[].Instances[].[InstanceId,InstanceType,State.Name,Tags[?Key==`Name`]|[0].Value]' \
-  --output table
-COUNT=$(aws ec2 describe-instances --region "$R" \
-  --filters "Name=instance-state-name,Values=pending,running,stopping,stopped" \
-  --query 'length(Reservations[].Instances[][])' --output text)
-EXTRA=$(aws ec2 describe-instances --region "$R" \
-  --filters "Name=instance-state-name,Values=pending,running,stopping,stopped" \
-  --query 'Reservations[].Instances[?!(Tags[?Key==`Name`&&Value==`acs730-workstation`]))][].InstanceId' \
-  --output text 2>/dev/null || true)
-if [ -n "${EXTRA// }" ]; then
-  FOUND=1
-  echo "⚠️  Non-workstation instances present: $EXTRA"
-  echo "    Terminate with: aws ec2 terminate-instances --instance-ids <id ...>"
-fi
-
-section "AMIs you own (their snapshots bill continuously)"
-aws ec2 describe-images --region "$R" --owners self \
-  --query 'Images[].[ImageId,Name,CreationDate]' --output table
-AMIS=$(aws ec2 describe-images --region "$R" --owners self --query 'Images[].ImageId' --output text)
-if [ -n "${AMIS// }" ]; then
-  FOUND=1
-  echo "⚠️  Owned AMIs present. For each one you no longer need:"
-  echo "    SNAP=\$(aws ec2 describe-images --image-ids <ami-id> --query 'Images[0].BlockDeviceMappings[0].Ebs.SnapshotId' --output text)"
-  echo "    aws ec2 deregister-image --image-id <ami-id> && aws ec2 delete-snapshot --snapshot-id \$SNAP"
-fi
-
-section "EBS snapshots you own"
-aws ec2 describe-snapshots --region "$R" --owner-ids self \
-  --query 'Snapshots[].[SnapshotId,VolumeSize,StartTime,Description]' --output table
-SNAPS=$(aws ec2 describe-snapshots --region "$R" --owner-ids self --query 'Snapshots[].SnapshotId' --output text)
-[ -n "${SNAPS// }" ] && { FOUND=1; echo "⚠️  Snapshots present (some belong to AMIs above -- deregister the AMI first)."; }
-
-section "Unattached EBS volumes (billing while 'available')"
-aws ec2 describe-volumes --region "$R" --filters "Name=status,Values=available" \
-  --query 'Volumes[].[VolumeId,Size,CreateTime]' --output table
-VOLS=$(aws ec2 describe-volumes --region "$R" --filters "Name=status,Values=available" --query 'Volumes[].VolumeId' --output text)
-[ -n "${VOLS// }" ] && { FOUND=1; echo "⚠️  Delete with: aws ec2 delete-volume --volume-id <id>"; }
-
-section "Security groups (default and your workstation's are expected)"
-aws ec2 describe-security-groups --region "$R" \
-  --query 'SecurityGroups[].[GroupId,GroupName]' --output table
-
-section "Key pairs (vockey is Academy's; others should exist only mid-lab)"
-aws ec2 describe-key-pairs --region "$R" --query 'KeyPairs[].[KeyName]' --output table
-
-section "S3 buckets (your tfstate bucket is expected and stays all term)"
-aws s3 ls
-
-section "Terraform states that still track resources (destroy before deadline)"
-if command -v terraform >/dev/null 2>&1 && git rev-parse --show-toplevel >/dev/null 2>&1; then
-  ROOT=$(git rev-parse --show-toplevel)
-  while IFS= read -r tfd; do
-    case "$tfd" in *".terraform"*) continue ;; esac
-    if [ -d "$tfd/.terraform" ]; then
-      N=$(cd "$tfd" && terraform state list 2>/dev/null | wc -l)
-      if [ "$N" -gt 0 ]; then
-        FOUND=1
-        echo "⚠️  $tfd still tracks $N resource(s) -> cd $tfd && terraform destroy"
-      else
-        echo "✅ $tfd: state empty"
-      fi
+# ---------- running and stopped instances ----------
+# A stopped instance costs nothing for compute but its root volume still
+# bills, so both are worth seeing. The workstation is called out by name
+# rather than hidden -- it is meant to survive, but you should still know
+# it is there.
+hdr "EC2 instances"
+while read -r id state itype name; do
+    [ -z "${id:-}" ] && continue
+    if [ "${name:-}" = "acs730-workstation" ]; then
+      echo "   $id  $state  $itype  $name   (your workstation -- keep this)"
+    else
+      item "$id  $state  $itype  ${name:-no-name}"
+      cmd "aws ec2 terminate-instances --instance-ids $id"
     fi
-  done < <(find "$ROOT" -name '*.tf' -exec dirname {} \; | sort -u)
-else
-  echo "(terraform not installed or not in a repo -- skipping state inspection)"
-fi
+done < <(aws ec2 describe-instances \
+  --filters "Name=instance-state-name,Values=running,stopped" \
+  --query 'Reservations[].Instances[].[InstanceId,State.Name,InstanceType,(Tags[?Key==`Name`].Value|[0])]' \
+  --output text 2>/dev/null)
 
-echo
+# ---------- AMIs and the snapshots behind them ----------
+# Deregistering an AMI does not delete its snapshot, and the snapshot is
+# the part that bills. This is the single most-missed leftover in Lab 6.
+hdr "Your AMIs (and their snapshots)"
+while read -r ami name snap; do
+    [ -z "${ami:-}" ] && continue
+    item "$ami  ${name:-}  snapshot ${snap:-none}"
+    cmd "aws ec2 deregister-image --image-id $ami"
+    [ -n "${snap:-}" ] && [ "$snap" != "None" ] && cmd "aws ec2 delete-snapshot --snapshot-id $snap"
+done < <(aws ec2 describe-images --owners self \
+  --query 'Images[].[ImageId,Name,BlockDeviceMappings[0].Ebs.SnapshotId]' \
+  --output text 2>/dev/null)
+
+# ---------- unattached volumes ----------
+hdr "Unattached EBS volumes"
+while read -r vol size vtype; do
+    [ -z "${vol:-}" ] && continue
+    item "$vol  ${size}GiB  $vtype"
+    cmd "aws ec2 delete-volume --volume-id $vol"
+done < <(aws ec2 describe-volumes --filters "Name=status,Values=available" \
+  --query 'Volumes[].[VolumeId,Size,VolumeType]' --output text 2>/dev/null)
+
+# ---------- snapshots not tied to an AMI ----------
+hdr "Snapshots you own"
+while read -r snap size desc; do
+    [ -z "${snap:-}" ] && continue
+    item "$snap  ${size}GiB  ${desc:-}"
+    cmd "aws ec2 delete-snapshot --snapshot-id $snap"
+done < <(aws ec2 describe-snapshots --owner-ids self \
+  --query 'Snapshots[].[SnapshotId,VolumeSize,Description]' --output text 2>/dev/null)
+
+# ---------- security groups you made ----------
+hdr "Non-default security groups"
+while read -r sg sgname; do
+    [ -z "${sg:-}" ] && continue
+    item "$sg  $sgname"
+    cmd "aws ec2 delete-security-group --group-id $sg"
+done < <(aws ec2 describe-security-groups \
+  --query 'SecurityGroups[?GroupName!=`default`].[GroupId,GroupName]' \
+  --output text 2>/dev/null)
+
+# ---------- Terraform state that still tracks live resources ----------
+# A tfstate with resources in it means Terraform thinks something exists.
+# If you destroy by hand instead of with terraform destroy, the state and
+# reality drift apart and the next apply does something surprising.
+hdr "Terraform state files that still track resources"
+while IFS= read -r st; do
+  [ -z "$st" ] && continue
+  N="$(python3 -c "import json,sys;print(len(json.load(open(sys.argv[1])).get('resources',[])))" "$st" 2>/dev/null || echo "?")"
+  if [ "$N" != "0" ] && [ -n "$N" ]; then
+    item "$st  tracks $N resource(s)"
+    cmd "cd $(dirname "$st") && terraform destroy"
+  fi
+done < <(find . -name '*.tfstate' -not -path './.git/*' 2>/dev/null)
+
+echo ""
 if [ "$FOUND" -eq 0 ]; then
-  echo "🎉 Nothing unexpected found. Your workstation stops automatically when the session ends."
+  echo "Nothing left over. Your account is clean."
 else
-  echo "⚠️  Items flagged above are eating the \$50. Clean them up before you leave."
+  echo "Review the items above. This script deleted nothing."
 fi
+echo ""
