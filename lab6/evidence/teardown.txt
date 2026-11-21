@@ -1,0 +1,53 @@
+
+[0m[1m[32mNo changes.[0m[1m No objects need to be destroyed.[0m
+
+[0mEither you have not created any objects yet or the existing objects were
+already deleted outside of Terraform.
+[0m[1m[32m
+Destroy complete! Resources: 0 destroyed.
+[0msnapshot behind the AMI: snap-0c919dbb99964e5ee
+{
+    "Return": true,
+    "DeleteSnapshotResults": []
+}
+remove_bucket: acs730-lab6-ssm-056432246332
+
+== EC2 instances
+   i-0c1d37eb8c8db9b16  running  t3.micro  acs730-workstation   (your workstation -- keep this)
+   i-0e169f78c98889ac9  running  t3.micro  acs730-lab6-web-0
+      -> aws ec2 terminate-instances --instance-ids i-0e169f78c98889ac9
+   i-0fa2fca24a156f07c  running  t3.micro  acs730-lab6-web-1
+      -> aws ec2 terminate-instances --instance-ids i-0fa2fca24a156f07c
+   i-0118446d248543209  running  t3.micro  acs730-lab6-golden
+      -> aws ec2 terminate-instances --instance-ids i-0118446d248543209
+
+== Your AMIs (and their snapshots)
+
+== Unattached EBS volumes
+
+== Snapshots you own
+
+== Non-default security groups
+   sg-07e29f80ce59bf435  launch-wizard-1
+      -> aws ec2 delete-security-group --group-id sg-07e29f80ce59bf435
+   sg-0e8143669d61900ab  instance-sg-2
+      -> aws ec2 delete-security-group --group-id sg-0e8143669d61900ab
+   sg-0a787fa17ff3d7718  instance-sg-1
+      -> aws ec2 delete-security-group --group-id sg-0a787fa17ff3d7718
+   sg-0f13ab5cdab1d03b4  testEFS
+      -> aws ec2 delete-security-group --group-id sg-0f13ab5cdab1d03b4
+   sg-08638e05e984ac91d  efs-sg-2
+      -> aws ec2 delete-security-group --group-id sg-08638e05e984ac91d
+   sg-069fb6111221a61ef  efs-sg-1
+      -> aws ec2 delete-security-group --group-id sg-069fb6111221a61ef
+   sg-03733df18eb0d6614  acs730-lab6-sg
+      -> aws ec2 delete-security-group --group-id sg-03733df18eb0d6614
+   sg-09cbfd84564054b3d  module6-sg
+      -> aws ec2 delete-security-group --group-id sg-09cbfd84564054b3d
+
+== Terraform state files that still track resources
+   ./midterm-practice/terraform/terraform.tfstate  tracks 1 resource(s)
+      -> cd ./midterm-practice/terraform && terraform destroy
+
+Review the items above. This script deleted nothing.
+
