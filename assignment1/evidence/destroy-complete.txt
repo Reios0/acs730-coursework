@@ -1,0 +1,831 @@
+=== destroy dev ===
+
+No changes. No objects need to be destroyed.
+
+Either you have not created any objects yet or the existing objects were
+already deleted outside of Terraform.
+
+Destroy complete! Resources: 0 destroyed.
+=== destroy staging ===
+data.aws_ssm_parameter.db_password: Reading...
+module.app.data.aws_ami.al2023: Reading...
+module.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Refreshing state... [id=acs730-a1-staging-cpu-high-0]
+module.app.aws_vpc.main: Refreshing state... [id=vpc-09a7a296177abcb95]
+data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/staging/db_password]
+module.app.data.aws_ami.al2023: Read complete after 0s [id=ami-02771ddfb8e749b97]
+module.app.aws_security_group.web: Refreshing state... [id=sg-01839d2798d8f0e70]
+module.app.aws_internet_gateway.main: Refreshing state... [id=igw-0ae0cce70d6858568]
+module.app.aws_subnet.public["b"]: Refreshing state... [id=subnet-0cd488ba1a3140eb4]
+module.app.aws_subnet.public["a"]: Refreshing state... [id=subnet-0de5118ceb9a66515]
+module.app.aws_route_table.public: Refreshing state... [id=rtb-0fc9e59be51dbc4b5]
+module.app.aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-0261c796f1eb2e95c]
+module.app.aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0d3b9647196ab9ff7]
+module.app.aws_instance.web[0]: Refreshing state... [id=i-01591842df64d9db1]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.app.aws_cloudwatch_metric_alarm.cpu_high[0] will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "cpu_high" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [] -> null
+      - alarm_name                            = "acs730-a1-staging-cpu-high-0" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:056432246332:alarm:acs730-a1-staging-cpu-high-0" -> null
+      - comparison_operator                   = "GreaterThanThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "InstanceId" = "i-01591842df64d9db1"
+        } -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "acs730-a1-staging-cpu-high-0" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "CPUUtilization" -> null
+      - namespace                             = "AWS/EC2" -> null
+      - ok_actions                            = [] -> null
+      - period                                = 120 -> null
+      - statistic                             = "Average" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Owner"       = "kliu106"
+        } -> null
+      - threshold                             = 80 -> null
+      - treat_missing_data                    = "missing" -> null
+        # (5 unchanged attributes hidden)
+    }
+
+  # module.app.aws_instance.web[0] will be destroyed
+  - resource "aws_instance" "web" {
+      - ami                                  = "ami-02771ddfb8e749b97" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:056432246332:instance/i-01591842df64d9db1" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-01591842df64d9db1" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0800386e40b8c78e5" -> null
+      - private_dns                          = "ip-10-20-1-191.ec2.internal" -> null
+      - private_ip                           = "10.20.1.191" -> null
+      - public_dns                           = "ec2-54-152-11-73.compute-1.amazonaws.com" -> null
+      - public_ip                            = "54.152.11.73" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0de5118ceb9a66515" -> null
+      - tags                                 = {
+          - "Name" = "acs730-a1-staging-web-0"
+        } -> null
+      - tags_all                             = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-web-0"
+          - "Owner"       = "kliu106"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data                            = "a765abc5cea646ea81a225d71d78ef99912e0766" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-01839d2798d8f0e70",
+        ] -> null
+        # (8 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {
+              - "Assignment"  = "assignment1"
+              - "Course"      = "ACS730"
+              - "Environment" = "staging"
+              - "Owner"       = "kliu106"
+            } -> null
+          - tags_all              = {
+              - "Assignment"  = "assignment1"
+              - "Course"      = "ACS730"
+              - "Environment" = "staging"
+              - "Owner"       = "kliu106"
+            } -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-08dd854f0513b4962" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.app.aws_internet_gateway.main will be destroyed
+  - resource "aws_internet_gateway" "main" {
+      - arn      = "arn:aws:ec2:us-east-1:056432246332:internet-gateway/igw-0ae0cce70d6858568" -> null
+      - id       = "igw-0ae0cce70d6858568" -> null
+      - owner_id = "056432246332" -> null
+      - tags     = {
+          - "Name" = "acs730-a1-staging-igw"
+        } -> null
+      - tags_all = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-igw"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id   = "vpc-09a7a296177abcb95" -> null
+    }
+
+  # module.app.aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:056432246332:route-table/rtb-0fc9e59be51dbc4b5" -> null
+      - id               = "rtb-0fc9e59be51dbc4b5" -> null
+      - owner_id         = "056432246332" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0ae0cce70d6858568"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "acs730-a1-staging-public-rt"
+        } -> null
+      - tags_all         = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-public-rt"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id           = "vpc-09a7a296177abcb95" -> null
+    }
+
+  # module.app.aws_route_table_association.public["a"] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0261c796f1eb2e95c" -> null
+      - route_table_id = "rtb-0fc9e59be51dbc4b5" -> null
+      - subnet_id      = "subnet-0de5118ceb9a66515" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.app.aws_route_table_association.public["b"] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0d3b9647196ab9ff7" -> null
+      - route_table_id = "rtb-0fc9e59be51dbc4b5" -> null
+      - subnet_id      = "subnet-0cd488ba1a3140eb4" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.app.aws_security_group.web will be destroyed
+  - resource "aws_security_group" "web" {
+      - arn                    = "arn:aws:ec2:us-east-1:056432246332:security-group/sg-01839d2798d8f0e70" -> null
+      - description            = "HTTP only" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Allow all outbound"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-01839d2798d8f0e70" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "HTTP"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "acs730-a1-staging-web" -> null
+      - owner_id               = "056432246332" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "acs730-a1-staging-web-sg"
+        } -> null
+      - tags_all               = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-web-sg"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id                 = "vpc-09a7a296177abcb95" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.app.aws_subnet.public["a"] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:056432246332:subnet/subnet-0de5118ceb9a66515" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az4" -> null
+      - cidr_block                                     = "10.20.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0de5118ceb9a66515" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "056432246332" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "acs730-a1-staging-public-a"
+        } -> null
+      - tags_all                                       = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-public-a"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id                                         = "vpc-09a7a296177abcb95" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.app.aws_subnet.public["b"] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:056432246332:subnet/subnet-0cd488ba1a3140eb4" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1b" -> null
+      - availability_zone_id                           = "use1-az6" -> null
+      - cidr_block                                     = "10.20.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0cd488ba1a3140eb4" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "056432246332" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "acs730-a1-staging-public-b"
+        } -> null
+      - tags_all                                       = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-public-b"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id                                         = "vpc-09a7a296177abcb95" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.app.aws_vpc.main will be destroyed
+  - resource "aws_vpc" "main" {
+      - arn                                  = "arn:aws:ec2:us-east-1:056432246332:vpc/vpc-09a7a296177abcb95" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.20.0.0/16" -> null
+      - default_network_acl_id               = "acl-0c503c0caa31e9d6a" -> null
+      - default_route_table_id               = "rtb-04a7581167d61af9b" -> null
+      - default_security_group_id            = "sg-0f6b8f86948c8273b" -> null
+      - dhcp_options_id                      = "dopt-0eb5b88e41f375f19" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-09a7a296177abcb95" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-04a7581167d61af9b" -> null
+      - owner_id                             = "056432246332" -> null
+      - tags                                 = {
+          - "Name" = "acs730-a1-staging-vpc"
+        } -> null
+      - tags_all                             = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "staging"
+          - "Name"        = "acs730-a1-staging-vpc"
+          - "Owner"       = "kliu106"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 10 to destroy.
+
+Changes to Outputs:
+  - db_parameter_name  = "/acs730/assignment1/staging/db_password" -> null
+  - db_password_length = 11 -> null
+module.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Destroying... [id=acs730-a1-staging-cpu-high-0]
+module.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Destruction complete after 0s
+module.app.aws_instance.web[0]: Destroying... [id=i-01591842df64d9db1]
+module.app.aws_instance.web[0]: Still destroying... [id=i-01591842df64d9db1, 10s elapsed]
+module.app.aws_instance.web[0]: Still destroying... [id=i-01591842df64d9db1, 20s elapsed]
+module.app.aws_instance.web[0]: Destruction complete after 30s
+module.app.aws_route_table_association.public["b"]: Destroying... [id=rtbassoc-0d3b9647196ab9ff7]
+module.app.aws_route_table_association.public["a"]: Destroying... [id=rtbassoc-0261c796f1eb2e95c]
+module.app.aws_security_group.web: Destroying... [id=sg-01839d2798d8f0e70]
+module.app.aws_route_table_association.public["a"]: Destruction complete after 1s
+module.app.aws_route_table_association.public["b"]: Destruction complete after 1s
+module.app.aws_subnet.public["a"]: Destroying... [id=subnet-0de5118ceb9a66515]
+module.app.aws_subnet.public["b"]: Destroying... [id=subnet-0cd488ba1a3140eb4]
+module.app.aws_route_table.public: Destroying... [id=rtb-0fc9e59be51dbc4b5]
+module.app.aws_security_group.web: Destruction complete after 1s
+module.app.aws_subnet.public["b"]: Destruction complete after 0s
+module.app.aws_subnet.public["a"]: Destruction complete after 1s
+module.app.aws_route_table.public: Destruction complete after 1s
+module.app.aws_internet_gateway.main: Destroying... [id=igw-0ae0cce70d6858568]
+module.app.aws_internet_gateway.main: Destruction complete after 0s
+module.app.aws_vpc.main: Destroying... [id=vpc-09a7a296177abcb95]
+module.app.aws_vpc.main: Destruction complete after 1s
+
+Destroy complete! Resources: 10 destroyed.
+=== destroy prod ===
+data.aws_ssm_parameter.db_password: Reading...
+module.app.aws_vpc.main: Refreshing state... [id=vpc-06b53f58a090bf249]
+module.app.data.aws_ami.al2023: Reading...
+module.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Refreshing state... [id=acs730-a1-prod-cpu-high-0]
+data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/prod/db_password]
+module.app.data.aws_ami.al2023: Read complete after 0s [id=ami-02771ddfb8e749b97]
+module.app.aws_security_group.web: Refreshing state... [id=sg-01b8593479ca2b9fa]
+module.app.aws_internet_gateway.main: Refreshing state... [id=igw-0b5a5eb2500706c14]
+module.app.aws_subnet.public["a"]: Refreshing state... [id=subnet-08e4477e7492077b9]
+module.app.aws_subnet.public["b"]: Refreshing state... [id=subnet-08db0b19ab2880db0]
+module.app.aws_route_table.public: Refreshing state... [id=rtb-0559d1c709612f608]
+module.app.aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-043ed6848619ba710]
+module.app.aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-0e235c5aa4f08a925]
+module.app.aws_instance.web[0]: Refreshing state... [id=i-0fdb40ba83dcffed7]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.app.aws_cloudwatch_metric_alarm.cpu_high[0] will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "cpu_high" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [] -> null
+      - alarm_name                            = "acs730-a1-prod-cpu-high-0" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:056432246332:alarm:acs730-a1-prod-cpu-high-0" -> null
+      - comparison_operator                   = "GreaterThanThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "InstanceId" = "i-0fdb40ba83dcffed7"
+        } -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "acs730-a1-prod-cpu-high-0" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "CPUUtilization" -> null
+      - namespace                             = "AWS/EC2" -> null
+      - ok_actions                            = [] -> null
+      - period                                = 120 -> null
+      - statistic                             = "Average" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Owner"       = "kliu106"
+        } -> null
+      - threshold                             = 80 -> null
+      - treat_missing_data                    = "missing" -> null
+        # (5 unchanged attributes hidden)
+    }
+
+  # module.app.aws_instance.web[0] will be destroyed
+  - resource "aws_instance" "web" {
+      - ami                                  = "ami-02771ddfb8e749b97" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:056432246332:instance/i-0fdb40ba83dcffed7" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 2 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0fdb40ba83dcffed7" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.small" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0593075293363492c" -> null
+      - private_dns                          = "ip-10-30-1-134.ec2.internal" -> null
+      - private_ip                           = "10.30.1.134" -> null
+      - public_dns                           = "ec2-54-164-206-186.compute-1.amazonaws.com" -> null
+      - public_ip                            = "54.164.206.186" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-08e4477e7492077b9" -> null
+      - tags                                 = {
+          - "Name" = "acs730-a1-prod-web-0"
+        } -> null
+      - tags_all                             = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-web-0"
+          - "Owner"       = "kliu106"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data                            = "7405299d0f3060cfc1c62cd6c721ae120a8a4d4d" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-01b8593479ca2b9fa",
+        ] -> null
+        # (8 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 2 -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {
+              - "Assignment"  = "assignment1"
+              - "Course"      = "ACS730"
+              - "Environment" = "prod"
+              - "Owner"       = "kliu106"
+            } -> null
+          - tags_all              = {
+              - "Assignment"  = "assignment1"
+              - "Course"      = "ACS730"
+              - "Environment" = "prod"
+              - "Owner"       = "kliu106"
+            } -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-06a1dbe11e12d5186" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.app.aws_internet_gateway.main will be destroyed
+  - resource "aws_internet_gateway" "main" {
+      - arn      = "arn:aws:ec2:us-east-1:056432246332:internet-gateway/igw-0b5a5eb2500706c14" -> null
+      - id       = "igw-0b5a5eb2500706c14" -> null
+      - owner_id = "056432246332" -> null
+      - tags     = {
+          - "Name" = "acs730-a1-prod-igw"
+        } -> null
+      - tags_all = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-igw"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id   = "vpc-06b53f58a090bf249" -> null
+    }
+
+  # module.app.aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:056432246332:route-table/rtb-0559d1c709612f608" -> null
+      - id               = "rtb-0559d1c709612f608" -> null
+      - owner_id         = "056432246332" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0b5a5eb2500706c14"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "acs730-a1-prod-public-rt"
+        } -> null
+      - tags_all         = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-public-rt"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id           = "vpc-06b53f58a090bf249" -> null
+    }
+
+  # module.app.aws_route_table_association.public["a"] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0e235c5aa4f08a925" -> null
+      - route_table_id = "rtb-0559d1c709612f608" -> null
+      - subnet_id      = "subnet-08e4477e7492077b9" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.app.aws_route_table_association.public["b"] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-043ed6848619ba710" -> null
+      - route_table_id = "rtb-0559d1c709612f608" -> null
+      - subnet_id      = "subnet-08db0b19ab2880db0" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.app.aws_security_group.web will be destroyed
+  - resource "aws_security_group" "web" {
+      - arn                    = "arn:aws:ec2:us-east-1:056432246332:security-group/sg-01b8593479ca2b9fa" -> null
+      - description            = "HTTP only" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Allow all outbound"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-01b8593479ca2b9fa" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "HTTP"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "acs730-a1-prod-web" -> null
+      - owner_id               = "056432246332" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "acs730-a1-prod-web-sg"
+        } -> null
+      - tags_all               = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-web-sg"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id                 = "vpc-06b53f58a090bf249" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.app.aws_subnet.public["a"] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:056432246332:subnet/subnet-08e4477e7492077b9" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az4" -> null
+      - cidr_block                                     = "10.30.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-08e4477e7492077b9" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "056432246332" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "acs730-a1-prod-public-a"
+        } -> null
+      - tags_all                                       = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-public-a"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id                                         = "vpc-06b53f58a090bf249" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.app.aws_subnet.public["b"] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:056432246332:subnet/subnet-08db0b19ab2880db0" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1b" -> null
+      - availability_zone_id                           = "use1-az6" -> null
+      - cidr_block                                     = "10.30.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-08db0b19ab2880db0" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "056432246332" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "acs730-a1-prod-public-b"
+        } -> null
+      - tags_all                                       = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-public-b"
+          - "Owner"       = "kliu106"
+        } -> null
+      - vpc_id                                         = "vpc-06b53f58a090bf249" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.app.aws_vpc.main will be destroyed
+  - resource "aws_vpc" "main" {
+      - arn                                  = "arn:aws:ec2:us-east-1:056432246332:vpc/vpc-06b53f58a090bf249" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.30.0.0/16" -> null
+      - default_network_acl_id               = "acl-0384cfdb4c3990446" -> null
+      - default_route_table_id               = "rtb-0e42a15448ab3c968" -> null
+      - default_security_group_id            = "sg-018947ed778424ab0" -> null
+      - dhcp_options_id                      = "dopt-0eb5b88e41f375f19" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-06b53f58a090bf249" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0e42a15448ab3c968" -> null
+      - owner_id                             = "056432246332" -> null
+      - tags                                 = {
+          - "Name" = "acs730-a1-prod-vpc"
+        } -> null
+      - tags_all                             = {
+          - "Assignment"  = "assignment1"
+          - "Course"      = "ACS730"
+          - "Environment" = "prod"
+          - "Name"        = "acs730-a1-prod-vpc"
+          - "Owner"       = "kliu106"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 10 to destroy.
+
+Changes to Outputs:
+  - db_parameter_name  = "/acs730/assignment1/prod/db_password" -> null
+  - db_password_length = 11 -> null
+module.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Destroying... [id=acs730-a1-prod-cpu-high-0]
+module.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Destruction complete after 0s
+module.app.aws_instance.web[0]: Destroying... [id=i-0fdb40ba83dcffed7]
+module.app.aws_instance.web[0]: Still destroying... [id=i-0fdb40ba83dcffed7, 10s elapsed]
+module.app.aws_instance.web[0]: Still destroying... [id=i-0fdb40ba83dcffed7, 20s elapsed]
+module.app.aws_instance.web[0]: Still destroying... [id=i-0fdb40ba83dcffed7, 30s elapsed]
+module.app.aws_instance.web[0]: Destruction complete after 30s
+module.app.aws_route_table_association.public["a"]: Destroying... [id=rtbassoc-0e235c5aa4f08a925]
+module.app.aws_security_group.web: Destroying... [id=sg-01b8593479ca2b9fa]
+module.app.aws_route_table_association.public["b"]: Destroying... [id=rtbassoc-043ed6848619ba710]
+module.app.aws_route_table_association.public["b"]: Destruction complete after 0s
+module.app.aws_route_table_association.public["a"]: Destruction complete after 0s
+module.app.aws_subnet.public["a"]: Destroying... [id=subnet-08e4477e7492077b9]
+module.app.aws_route_table.public: Destroying... [id=rtb-0559d1c709612f608]
+module.app.aws_subnet.public["b"]: Destroying... [id=subnet-08db0b19ab2880db0]
+module.app.aws_security_group.web: Destruction complete after 1s
+module.app.aws_subnet.public["a"]: Destruction complete after 1s
+module.app.aws_route_table.public: Destruction complete after 1s
+module.app.aws_subnet.public["b"]: Destruction complete after 1s
+module.app.aws_internet_gateway.main: Destroying... [id=igw-0b5a5eb2500706c14]
+module.app.aws_internet_gateway.main: Destruction complete after 0s
+module.app.aws_vpc.main: Destroying... [id=vpc-06b53f58a090bf249]
+module.app.aws_vpc.main: Destruction complete after 1s
+
+Destroy complete! Resources: 10 destroyed.
+
+== EC2 instances
+   i-0c1d37eb8c8db9b16  running  t3.small  acs730-workstation   (your workstation -- keep this)
+
+== Your AMIs (and their snapshots)
+
+== Unattached EBS volumes
+
+== Snapshots you own
+
+== Non-default security groups
+   sg-07e29f80ce59bf435  launch-wizard-1
+      -> aws ec2 delete-security-group --group-id sg-07e29f80ce59bf435
+   sg-0e8143669d61900ab  instance-sg-2
+      -> aws ec2 delete-security-group --group-id sg-0e8143669d61900ab
+   sg-0a787fa17ff3d7718  instance-sg-1
+      -> aws ec2 delete-security-group --group-id sg-0a787fa17ff3d7718
+   sg-0f13ab5cdab1d03b4  testEFS
+      -> aws ec2 delete-security-group --group-id sg-0f13ab5cdab1d03b4
+   sg-08638e05e984ac91d  efs-sg-2
+      -> aws ec2 delete-security-group --group-id sg-08638e05e984ac91d
+   sg-069fb6111221a61ef  efs-sg-1
+      -> aws ec2 delete-security-group --group-id sg-069fb6111221a61ef
+   sg-03733df18eb0d6614  acs730-lab6-sg
+      -> aws ec2 delete-security-group --group-id sg-03733df18eb0d6614
+   sg-09cbfd84564054b3d  module6-sg
+      -> aws ec2 delete-security-group --group-id sg-09cbfd84564054b3d
+
+== Terraform state files that still track resources
+
+Review the items above. This script deleted nothing.
+
