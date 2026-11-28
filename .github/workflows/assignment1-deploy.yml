@@ -1,0 +1,98 @@
+name: assignment1-deploy
+
+on:
+  pull_request:
+    paths:
+      - 'assignment1/**'
+      - '!assignment1/evidence/**'
+      - '!assignment1/REPORT.md'
+  push:
+    branches: [main]
+    paths:
+      - 'assignment1/**'
+      - '!assignment1/evidence/**'
+      - '!assignment1/REPORT.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: assignment1-deploy
+  cancel-in-progress: false
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+          terraform_wrapper: false
+      - run: terraform fmt -check -recursive assignment1/terraform
+      - run: |
+          for e in dev staging prod; do
+            (cd assignment1/terraform/$e && terraform init -backend=false -input=false \
+            && terraform validate)
+          done
+
+creds-check:
+  if: github.event_name == 'pull_request'
+  needs: gates
+  runs-on: ubuntu-latest
+  environment: staging
+  steps:
+    - uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+        aws-region: ${{ vars.AWS_REGION }}
+    - run: aws sts get-caller-identity
+
+apply-staging:
+  if: github.event_name == 'push'
+  needs: gates
+  runs-on: ubuntu-latest
+  environment: staging
+  defaults:
+    run:
+      working-directory: assignment1/terraform/staging
+  steps:
+    - uses: actions/checkout@v4
+    - uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+        aws-region: ${{ vars.AWS_REGION }}
+    - uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: 1.10.3
+        terraform_wrapper: false
+    - run: terraform init -input=false
+    - run: terraform plan -input=false -out=tfplan
+    - run: terraform apply -input=false tfplan
+
+apply-prod:
+  needs: apply-staging
+  runs-on: ubuntu-latest
+  environment: prod
+  defaults:
+    run:
+      working-directory: assignment1/terraform/prod
+  steps:
+    - uses: actions/checkout@v4
+    - uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+        aws-region: ${{ vars.AWS_REGION }}
+    - uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: 1.10.3
+        terraform_wrapper: false
+    - run: terraform init -input=false
+    - run: terraform plan -input=false -out=tfplan
+    - run: terraform apply -input=false tfplan
