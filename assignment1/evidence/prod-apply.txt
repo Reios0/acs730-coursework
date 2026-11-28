@@ -1,0 +1,552 @@
+apply-prod	Set up job	﻿2026-11-28T02:08:15.7035307Z Current runner version: '2.338.2'
+apply-prod	Set up job	2026-11-28T02:08:15.7073661Z ##[group]Runner Image Provisioner
+apply-prod	Set up job	2026-11-28T02:08:15.7075097Z Hosted Compute Agent
+apply-prod	Set up job	2026-11-28T02:08:15.7076231Z Version: 20261111.635
+apply-prod	Set up job	2026-11-28T02:08:15.7077501Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+apply-prod	Set up job	2026-11-28T02:08:15.7079006Z Build Date: 2026-11-11T01:49:01Z
+apply-prod	Set up job	2026-11-28T02:08:15.7080240Z Worker ID: {5b28fe09-2ef3-483d-94e6-9452f11e5497}
+apply-prod	Set up job	2026-11-28T02:08:15.7081776Z Region: eastus
+apply-prod	Set up job	2026-11-28T02:08:15.7082947Z Cloud: Azure
+apply-prod	Set up job	2026-11-28T02:08:15.7083944Z ##[endgroup]
+apply-prod	Set up job	2026-11-28T02:08:15.7086545Z ##[group]Operating System
+apply-prod	Set up job	2026-11-28T02:08:15.7087648Z Ubuntu
+apply-prod	Set up job	2026-11-28T02:08:15.7088734Z 26.04.1
+apply-prod	Set up job	2026-11-28T02:08:15.7089698Z LTS
+apply-prod	Set up job	2026-11-28T02:08:15.7090740Z ##[endgroup]
+apply-prod	Set up job	2026-11-28T02:08:15.7092038Z ##[group]Runner Image
+apply-prod	Set up job	2026-11-28T02:08:15.7093211Z Image: ubuntu-26.04
+apply-prod	Set up job	2026-11-28T02:08:15.7094286Z Version: 20261122.9.1
+apply-prod	Set up job	2026-11-28T02:08:15.7096325Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+apply-prod	Set up job	2026-11-28T02:08:15.7099476Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+apply-prod	Set up job	2026-11-28T02:08:15.7101594Z ##[endgroup]
+apply-prod	Set up job	2026-11-28T02:08:15.7103699Z ##[group]GITHUB_TOKEN Permissions
+apply-prod	Set up job	2026-11-28T02:08:15.7106397Z Contents: read
+apply-prod	Set up job	2026-11-28T02:08:15.7107528Z Metadata: read
+apply-prod	Set up job	2026-11-28T02:08:15.7108513Z ##[endgroup]
+apply-prod	Set up job	2026-11-28T02:08:15.7112035Z Secret source: Actions
+apply-prod	Set up job	2026-11-28T02:08:15.7113624Z Cache mode: write
+apply-prod	Set up job	2026-11-28T02:08:15.7114942Z Prepare workflow directory
+apply-prod	Set up job	2026-11-28T02:08:15.7716329Z Prepare all required actions
+apply-prod	Set up job	2026-11-28T02:08:15.7789556Z Getting action download info
+apply-prod	Set up job	2026-11-28T02:08:15.9814694Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+apply-prod	Set up job	2026-11-28T02:08:16.0818553Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+apply-prod	Set up job	2026-11-28T02:08:16.2180512Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+apply-prod	Set up job	2026-11-28T02:08:16.4234551Z Complete job name: apply-prod
+apply-prod	Run actions/checkout@v4	﻿2026-11-28T02:08:16.5143726Z ##[group]Run actions/checkout@v4
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5144668Z with:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5145148Z   repository: Reios0/acs730-coursework
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5149120Z   token: ***
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5149568Z   ssh-strict: true
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5150029Z   ssh-user: git
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5150493Z   persist-credentials: true
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5151169Z   clean: true
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5151646Z   sparse-checkout-cone-mode: true
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5152189Z   fetch-depth: 1
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5152633Z   fetch-tags: false
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5153088Z   show-progress: true
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5153550Z   lfs: false
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5153974Z   submodules: false
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5154443Z   set-safe-directory: true
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5154980Z   allow-unsafe-pr-checkout: false
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.5155778Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8335841Z Syncing repository: Reios0/acs730-coursework
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8337955Z ##[group]Getting Git version info
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8338995Z Working directory is '/home/runner/work/acs730-coursework/acs730-coursework'
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8401981Z [command]/usr/bin/git version
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8561772Z git version 2.56.1
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8584873Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8600996Z Temporarily overriding HOME='/home/runner/work/_temp/c89f1481-4915-4802-81f4-241da79d8447' before making global git config changes
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8603932Z Adding repository directory to the temporary git global config as a safe directory
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.8607724Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9333022Z Deleting the contents of '/home/runner/work/acs730-coursework/acs730-coursework'
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9337716Z ##[group]Initializing the repository
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9344825Z [command]/usr/bin/git init /home/runner/work/acs730-coursework/acs730-coursework
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9471278Z hint: Using 'master' as the name for the initial branch. This default branch name
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9473040Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9474342Z hint: to use in all of your new repositories, which will suppress this warning,
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9475338Z hint: call:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9475872Z hint:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9476567Z hint: 	git config --global init.defaultBranch <name>
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9477369Z hint:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9478126Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9479324Z hint: 'development'. The just-created branch can be renamed via this command:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9480294Z hint:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9481111Z hint: 	git branch -m <name>
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9481878Z hint:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9483232Z hint: Disable this message with "git config set advice.defaultBranchName false"
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9485749Z Initialized empty Git repository in /home/runner/work/acs730-coursework/acs730-coursework/.git/
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9499071Z [command]/usr/bin/git remote add origin https://github.com/Reios0/acs730-coursework
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9555475Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9556431Z ##[group]Disabling automatic garbage collection
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9560298Z [command]/usr/bin/git config --local gc.auto 0
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9598334Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9599777Z ##[group]Setting up auth
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9606490Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:16.9651607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0202555Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0252770Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0549032Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0586144Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0862931Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0905566Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0907390Z ##[group]Fetching the repository
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.0917001Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3e738d0b7b9b4dcc47b8e8a04fa47af81d4b6ddd:refs/remotes/origin/main
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3684333Z From https://github.com/Reios0/acs730-coursework
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3685902Z  * [new ref]         3e738d0b7b9b4dcc47b8e8a04fa47af81d4b6ddd -> origin/main
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3690312Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3691690Z ##[group]Determining the checkout info
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3694237Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3703892Z [command]/usr/bin/git sparse-checkout disable
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3765338Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3802931Z ##[group]Checking out the ref
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3807337Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3976979Z Switched to a new branch 'main'
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3982700Z branch 'main' set up to track 'origin/main'.
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.3990512Z ##[endgroup]
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.4041789Z [command]/usr/bin/git log -1 --format=%H
+apply-prod	Run actions/checkout@v4	2026-11-28T02:08:17.4067762Z 3e738d0b7b9b4dcc47b8e8a04fa47af81d4b6ddd
+apply-prod	Run aws-actions/configure-aws-credentials@v4	﻿2026-11-28T02:08:17.4513613Z ##[group]Run aws-actions/configure-aws-credentials@v4
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4514675Z with:
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4515328Z   aws-access-key-id: ***
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4516594Z   aws-secret-access-key: ***
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4530368Z   aws-session-token: ***
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4531183Z   aws-region: us-east-1
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4531828Z   audience: sts.amazonaws.com
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4532562Z   output-env-credentials: true
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.4533266Z ##[endgroup]
+apply-prod	Run aws-actions/configure-aws-credentials@v4	2026-11-28T02:08:17.6701263Z Proceeding with IAM user credentials
+apply-prod	Run hashicorp/setup-terraform@v3	﻿2026-11-28T02:08:17.6972652Z ##[group]Run hashicorp/setup-terraform@v3
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6974137Z with:
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6975161Z   terraform_version: 1.10.3
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6976404Z   terraform_wrapper: false
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6977778Z   cli_config_credentials_hostname: app.terraform.io
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6979273Z env:
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6980287Z   AWS_DEFAULT_REGION: us-east-1
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6981701Z   AWS_REGION: us-east-1
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6983154Z   AWS_ACCESS_KEY_ID: ***
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.6984756Z   AWS_SECRET_ACCESS_KEY: ***
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.7000041Z   AWS_SESSION_TOKEN: ***
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.7001298Z ##[endgroup]
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.8436830Z (node:2381) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:17.8444783Z (Use `node --trace-deprecation ...` to show where the warning was created)
+apply-prod	Run hashicorp/setup-terraform@v3	2026-11-28T02:08:18.1364325Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/18a8968c-b916-4db3-9e4e-8404fafb7b3f
+apply-prod	Run terraform init -input=false	﻿2026-11-28T02:08:18.7529801Z ##[group]Run terraform init -input=false
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7531476Z ^[[36;1mterraform init -input=false^[[0m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7572441Z shell: /usr/bin/bash -e {0}
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7573551Z env:
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7574458Z   AWS_DEFAULT_REGION: us-east-1
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7575599Z   AWS_REGION: us-east-1
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7576846Z   AWS_ACCESS_KEY_ID: ***
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7578266Z   AWS_SECRET_ACCESS_KEY: ***
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7592158Z   AWS_SESSION_TOKEN: ***
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.7593221Z ##[endgroup]
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.8121862Z ^[[0m^[[1mInitializing the backend...^[[0m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9225649Z ^[[0m^[[32m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9228283Z Successfully configured the backend "s3"! Terraform will automatically
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9231919Z use this backend unless the backend configuration changes.^[[0m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9541806Z ^[[0m^[[1mInitializing modules...^[[0m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9558680Z - app in ../modules
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9567864Z ^[[0m^[[1mInitializing provider plugins...^[[0m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:18.9570517Z - Reusing previous version of hashicorp/aws from the dependency lock file
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:19.0865079Z - Installing hashicorp/aws v5.100.0...
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0331605Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0332720Z 
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0356266Z ^[[0m^[[1m^[[32mTerraform has been successfully initialized!^[[0m^[[32m^[[0m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0357489Z ^[[0m^[[32m
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0358315Z You may now begin working with Terraform. Try running "terraform plan" to see
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0359534Z any changes that are required for your infrastructure. All Terraform commands
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0360403Z should now work.
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0361031Z 
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0361554Z If you ever set or change modules or backend configuration for Terraform,
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0362659Z rerun this command to reinitialize your working directory. If you forget, other
+apply-prod	Run terraform init -input=false	2026-11-28T02:08:26.0364185Z commands will detect it and remind you to do so if necessary.^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	﻿2026-11-28T02:08:26.0421804Z ##[group]Run terraform plan -input=false -out=tfplan
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0422303Z ^[[36;1mterraform plan -input=false -out=tfplan^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0456617Z shell: /usr/bin/bash -e {0}
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0456885Z env:
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0457106Z   AWS_DEFAULT_REGION: us-east-1
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0457366Z   AWS_REGION: us-east-1
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0457724Z   AWS_ACCESS_KEY_ID: ***
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0458071Z   AWS_SECRET_ACCESS_KEY: ***
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0461692Z   AWS_SESSION_TOKEN: ***
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:26.0462183Z ##[endgroup]
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:28.6315484Z ^[[0m^[[1mmodule.app.data.aws_ami.al2023: Reading...^[[0m^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:28.6318319Z ^[[0m^[[1mdata.aws_ssm_parameter.db_password: Reading...^[[0m^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:28.7038357Z ^[[0m^[[1mdata.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/prod/db_password]^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.1127748Z ^[[0m^[[1mmodule.app.data.aws_ami.al2023: Read complete after 0s [id=ami-02771ddfb8e749b97]^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2639178Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2640505Z Terraform used the selected providers to generate the following execution
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2641693Z plan. Resource actions are indicated with the following symbols:
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2642721Z   ^[[32m+^[[0m create^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2643002Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2643216Z Terraform will perform the following actions:
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2643595Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2644083Z ^[[1m  # module.app.aws_cloudwatch_metric_alarm.cpu_high[0]^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2645066Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_cloudwatch_metric_alarm" "cpu_high" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2645889Z       ^[[32m+^[[0m^[[0m actions_enabled                       = true
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2646760Z       ^[[32m+^[[0m^[[0m alarm_name                            = "acs730-a1-prod-cpu-high-0"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2647700Z       ^[[32m+^[[0m^[[0m arn                                   = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2648601Z       ^[[32m+^[[0m^[[0m comparison_operator                   = "GreaterThanThreshold"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2649600Z       ^[[32m+^[[0m^[[0m evaluate_low_sample_count_percentiles = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2650504Z       ^[[32m+^[[0m^[[0m evaluation_periods                    = 2
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2651605Z       ^[[32m+^[[0m^[[0m id                                    = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2652473Z       ^[[32m+^[[0m^[[0m metric_name                           = "CPUUtilization"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2653290Z       ^[[32m+^[[0m^[[0m namespace                             = "AWS/EC2"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2654046Z       ^[[32m+^[[0m^[[0m period                                = 120
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2654814Z       ^[[32m+^[[0m^[[0m statistic                             = "Average"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2655536Z       ^[[32m+^[[0m^[[0m tags_all                              = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2656206Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2656809Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2657357Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2657976Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2658416Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2658901Z       ^[[32m+^[[0m^[[0m threshold                             = 80
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2659593Z       ^[[32m+^[[0m^[[0m treat_missing_data                    = "missing"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2660186Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2660503Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2661260Z ^[[1m  # module.app.aws_instance.web[0]^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2662013Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_instance" "web" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2662744Z       ^[[32m+^[[0m^[[0m ami                                  = "ami-02771ddfb8e749b97"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2663532Z       ^[[32m+^[[0m^[[0m arn                                  = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2664380Z       ^[[32m+^[[0m^[[0m associate_public_ip_address          = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2665240Z       ^[[32m+^[[0m^[[0m availability_zone                    = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2666341Z       ^[[32m+^[[0m^[[0m cpu_core_count                       = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2666816Z       ^[[32m+^[[0m^[[0m cpu_threads_per_core                 = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2667288Z       ^[[32m+^[[0m^[[0m disable_api_stop                     = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2667769Z       ^[[32m+^[[0m^[[0m disable_api_termination              = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2668236Z       ^[[32m+^[[0m^[[0m ebs_optimized                        = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2668864Z       ^[[32m+^[[0m^[[0m enable_primary_ipv6                  = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2669303Z       ^[[32m+^[[0m^[[0m get_password_data                    = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2669736Z       ^[[32m+^[[0m^[[0m host_id                              = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2670216Z       ^[[32m+^[[0m^[[0m host_resource_group_arn              = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2670699Z       ^[[32m+^[[0m^[[0m iam_instance_profile                 = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2671500Z       ^[[32m+^[[0m^[[0m id                                   = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2671976Z       ^[[32m+^[[0m^[[0m instance_initiated_shutdown_behavior = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2672462Z       ^[[32m+^[[0m^[[0m instance_lifecycle                   = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2672928Z       ^[[32m+^[[0m^[[0m instance_state                       = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2673398Z       ^[[32m+^[[0m^[[0m instance_type                        = "t3.small"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2673851Z       ^[[32m+^[[0m^[[0m ipv6_address_count                   = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2674335Z       ^[[32m+^[[0m^[[0m ipv6_addresses                       = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2674796Z       ^[[32m+^[[0m^[[0m key_name                             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2675252Z       ^[[32m+^[[0m^[[0m monitoring                           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2675717Z       ^[[32m+^[[0m^[[0m outpost_arn                          = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2676189Z       ^[[32m+^[[0m^[[0m password_data                        = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2676661Z       ^[[32m+^[[0m^[[0m placement_group                      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2677149Z       ^[[32m+^[[0m^[[0m placement_partition_number           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2677640Z       ^[[32m+^[[0m^[[0m primary_network_interface_id         = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2678113Z       ^[[32m+^[[0m^[[0m private_dns                          = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2678572Z       ^[[32m+^[[0m^[[0m private_ip                           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2679021Z       ^[[32m+^[[0m^[[0m public_dns                           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2679470Z       ^[[32m+^[[0m^[[0m public_ip                            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2679971Z       ^[[32m+^[[0m^[[0m secondary_private_ips                = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2680483Z       ^[[32m+^[[0m^[[0m security_groups                      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2681160Z       ^[[32m+^[[0m^[[0m source_dest_check                    = true
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2681638Z       ^[[32m+^[[0m^[[0m spot_instance_request_id             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2682116Z       ^[[32m+^[[0m^[[0m subnet_id                            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2682570Z       ^[[32m+^[[0m^[[0m tags                                 = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2683003Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-web-0"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2683296Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2683575Z       ^[[32m+^[[0m^[[0m tags_all                             = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2683960Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2684307Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2684639Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2685188Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-web-0"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2685569Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2685849Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2686170Z       ^[[32m+^[[0m^[[0m tenancy                              = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2686703Z       ^[[32m+^[[0m^[[0m user_data                            = "7405299d0f3060cfc1c62cd6c721ae120a8a4d4d"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2687216Z       ^[[32m+^[[0m^[[0m user_data_base64                     = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2687799Z       ^[[32m+^[[0m^[[0m user_data_replace_on_change          = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2688247Z       ^[[32m+^[[0m^[[0m vpc_security_group_ids               = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2688523Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2688757Z       ^[[32m+^[[0m^[[0m capacity_reservation_specification (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2689029Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2689192Z       ^[[32m+^[[0m^[[0m cpu_options (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2689410Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2689576Z       ^[[32m+^[[0m^[[0m ebs_block_device (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2689800Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2689970Z       ^[[32m+^[[0m^[[0m enclave_options (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2690177Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2690363Z       ^[[32m+^[[0m^[[0m ephemeral_block_device (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2690598Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2690907Z       ^[[32m+^[[0m^[[0m instance_market_options (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2691151Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2691341Z       ^[[32m+^[[0m^[[0m maintenance_options (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2691565Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2691734Z       ^[[32m+^[[0m^[[0m metadata_options (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2691950Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2692121Z       ^[[32m+^[[0m^[[0m network_interface (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2692334Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2692527Z       ^[[32m+^[[0m^[[0m private_dns_name_options (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2692771Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2692933Z       ^[[32m+^[[0m^[[0m root_block_device (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2693229Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2693332Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2693541Z ^[[1m  # module.app.aws_internet_gateway.main^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2693969Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_internet_gateway" "main" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2694350Z       ^[[32m+^[[0m^[[0m arn      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2694692Z       ^[[32m+^[[0m^[[0m id       = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2695031Z       ^[[32m+^[[0m^[[0m owner_id = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2695350Z       ^[[32m+^[[0m^[[0m tags     = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2695663Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-igw"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2695944Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2696174Z       ^[[32m+^[[0m^[[0m tags_all = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2696486Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2696828Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2697163Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2697541Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-igw"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2697903Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2698172Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2698430Z       ^[[32m+^[[0m^[[0m vpc_id   = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2698701Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2698807Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2699001Z ^[[1m  # module.app.aws_route_table.public^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2699416Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_route_table" "public" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2699801Z       ^[[32m+^[[0m^[[0m arn              = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2700200Z       ^[[32m+^[[0m^[[0m id               = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2700569Z       ^[[32m+^[[0m^[[0m owner_id         = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2701047Z       ^[[32m+^[[0m^[[0m propagating_vgws = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2701385Z       ^[[32m+^[[0m^[[0m route            = [
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2701683Z           ^[[32m+^[[0m^[[0m {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2702135Z               ^[[32m+^[[0m^[[0m cidr_block                 = "0.0.0.0/0"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2702566Z               ^[[32m+^[[0m^[[0m gateway_id                 = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2703004Z                 ^[[90m# (11 unchanged attributes hidden)^[[0m^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2703306Z             },
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2703494Z         ]
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2703722Z       ^[[32m+^[[0m^[[0m tags             = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2704077Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-public-rt"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2704490Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2704721Z       ^[[32m+^[[0m^[[0m tags_all         = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2705058Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2705397Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2705733Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2706112Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-public-rt"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2706481Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2706758Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2707023Z       ^[[32m+^[[0m^[[0m vpc_id           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2707312Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2707421Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2707675Z ^[[1m  # module.app.aws_route_table_association.public["a"]^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2708192Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_route_table_association" "public" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2708607Z       ^[[32m+^[[0m^[[0m id             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2708980Z       ^[[32m+^[[0m^[[0m route_table_id = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2709354Z       ^[[32m+^[[0m^[[0m subnet_id      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2709637Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2709742Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2709988Z ^[[1m  # module.app.aws_route_table_association.public["b"]^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2710493Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_route_table_association" "public" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2711147Z       ^[[32m+^[[0m^[[0m id             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2711537Z       ^[[32m+^[[0m^[[0m route_table_id = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2711899Z       ^[[32m+^[[0m^[[0m subnet_id      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2712176Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2712280Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2712471Z ^[[1m  # module.app.aws_security_group.web^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2712884Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_security_group" "web" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2713275Z       ^[[32m+^[[0m^[[0m arn                    = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2713665Z       ^[[32m+^[[0m^[[0m description            = "HTTP only"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2714011Z       ^[[32m+^[[0m^[[0m egress                 = [
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2714310Z           ^[[32m+^[[0m^[[0m {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2714586Z               ^[[32m+^[[0m^[[0m cidr_blocks      = [
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2714915Z                   ^[[32m+^[[0m^[[0m "0.0.0.0/0",
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2715169Z                 ]
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2715466Z               ^[[32m+^[[0m^[[0m description      = "Allow all outbound"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2715842Z               ^[[32m+^[[0m^[[0m from_port        = 0
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2716169Z               ^[[32m+^[[0m^[[0m ipv6_cidr_blocks = []
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2716500Z               ^[[32m+^[[0m^[[0m prefix_list_ids  = []
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2716839Z               ^[[32m+^[[0m^[[0m protocol         = "-1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2717167Z               ^[[32m+^[[0m^[[0m security_groups  = []
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2717494Z               ^[[32m+^[[0m^[[0m self             = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2717826Z               ^[[32m+^[[0m^[[0m to_port          = 0
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2718084Z             },
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2718271Z         ]
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2718555Z       ^[[32m+^[[0m^[[0m id                     = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2718915Z       ^[[32m+^[[0m^[[0m ingress                = [
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2719212Z           ^[[32m+^[[0m^[[0m {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2719490Z               ^[[32m+^[[0m^[[0m cidr_blocks      = [
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2719954Z                   ^[[32m+^[[0m^[[0m "0.0.0.0/0",
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2720213Z                 ]
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2720489Z               ^[[32m+^[[0m^[[0m description      = "HTTP"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2721047Z               ^[[32m+^[[0m^[[0m from_port        = 80
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2721426Z               ^[[32m+^[[0m^[[0m ipv6_cidr_blocks = []
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2721750Z               ^[[32m+^[[0m^[[0m prefix_list_ids  = []
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2722090Z               ^[[32m+^[[0m^[[0m protocol         = "tcp"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2740358Z               ^[[32m+^[[0m^[[0m security_groups  = []
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2740995Z               ^[[32m+^[[0m^[[0m self             = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2741555Z               ^[[32m+^[[0m^[[0m to_port          = 80
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2741841Z             },
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2742045Z         ]
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2742374Z       ^[[32m+^[[0m^[[0m name                   = "acs730-a1-prod-web"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2742825Z       ^[[32m+^[[0m^[[0m name_prefix            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2743259Z       ^[[32m+^[[0m^[[0m owner_id               = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2743673Z       ^[[32m+^[[0m^[[0m revoke_rules_on_delete = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2744026Z       ^[[32m+^[[0m^[[0m tags                   = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2744394Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-web-sg"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2744697Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2744942Z       ^[[32m+^[[0m^[[0m tags_all               = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2745293Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2745655Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2745993Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2746373Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-web-sg"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2746748Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2747013Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2747310Z       ^[[32m+^[[0m^[[0m vpc_id                 = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2747622Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2747729Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2747933Z ^[[1m  # module.app.aws_subnet.public["a"]^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2748349Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_subnet" "public" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2748778Z       ^[[32m+^[[0m^[[0m arn                                            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2749269Z       ^[[32m+^[[0m^[[0m assign_ipv6_address_on_creation                = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2749778Z       ^[[32m+^[[0m^[[0m availability_zone                              = "us-east-1a"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2750318Z       ^[[32m+^[[0m^[[0m availability_zone_id                           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2751076Z       ^[[32m+^[[0m^[[0m cidr_block                                     = "10.30.1.0/24"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2751591Z       ^[[32m+^[[0m^[[0m enable_dns64                                   = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2752058Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_a_record_on_launch    = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2752523Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_aaaa_record_on_launch = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2753016Z       ^[[32m+^[[0m^[[0m id                                             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2753538Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block_association_id                 = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2754075Z       ^[[32m+^[[0m^[[0m ipv6_native                                    = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2754524Z       ^[[32m+^[[0m^[[0m map_public_ip_on_launch                        = true
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2755000Z       ^[[32m+^[[0m^[[0m owner_id                                       = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2755533Z       ^[[32m+^[[0m^[[0m private_dns_hostname_type_on_launch            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2756021Z       ^[[32m+^[[0m^[[0m tags                                           = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2756431Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-public-a"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2756743Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2757037Z       ^[[32m+^[[0m^[[0m tags_all                                       = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2757640Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2757990Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2758332Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2758718Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-public-a"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2759085Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2759568Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2759938Z       ^[[32m+^[[0m^[[0m vpc_id                                         = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2760281Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2760389Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2760596Z ^[[1m  # module.app.aws_subnet.public["b"]^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2761243Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_subnet" "public" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2761705Z       ^[[32m+^[[0m^[[0m arn                                            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2762194Z       ^[[32m+^[[0m^[[0m assign_ipv6_address_on_creation                = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2762685Z       ^[[32m+^[[0m^[[0m availability_zone                              = "us-east-1b"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2763203Z       ^[[32m+^[[0m^[[0m availability_zone_id                           = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2763717Z       ^[[32m+^[[0m^[[0m cidr_block                                     = "10.30.2.0/24"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2764177Z       ^[[32m+^[[0m^[[0m enable_dns64                                   = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2764641Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_a_record_on_launch    = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2765112Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_aaaa_record_on_launch = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2765571Z       ^[[32m+^[[0m^[[0m id                                             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2766081Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block_association_id                 = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2766574Z       ^[[32m+^[[0m^[[0m ipv6_native                                    = false
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2767012Z       ^[[32m+^[[0m^[[0m map_public_ip_on_launch                        = true
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2767484Z       ^[[32m+^[[0m^[[0m owner_id                                       = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2768004Z       ^[[32m+^[[0m^[[0m private_dns_hostname_type_on_launch            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2768481Z       ^[[32m+^[[0m^[[0m tags                                           = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2768892Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-public-b"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2769182Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2769462Z       ^[[32m+^[[0m^[[0m tags_all                                       = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2769848Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2770185Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2770515Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2771091Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-public-b"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2771485Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2771749Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2772068Z       ^[[32m+^[[0m^[[0m vpc_id                                         = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2772404Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2772511Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2772680Z ^[[1m  # module.app.aws_vpc.main^[[0m will be created
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2773059Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_vpc" "main" {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2773466Z       ^[[32m+^[[0m^[[0m arn                                  = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2773919Z       ^[[32m+^[[0m^[[0m cidr_block                           = "10.30.0.0/16"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2774393Z       ^[[32m+^[[0m^[[0m default_network_acl_id               = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2774877Z       ^[[32m+^[[0m^[[0m default_route_table_id               = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2775362Z       ^[[32m+^[[0m^[[0m default_security_group_id            = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2776003Z       ^[[32m+^[[0m^[[0m dhcp_options_id                      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2776449Z       ^[[32m+^[[0m^[[0m enable_dns_hostnames                 = true
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2776864Z       ^[[32m+^[[0m^[[0m enable_dns_support                   = true
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2777322Z       ^[[32m+^[[0m^[[0m enable_network_address_usage_metrics = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2777785Z       ^[[32m+^[[0m^[[0m id                                   = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2778419Z       ^[[32m+^[[0m^[[0m instance_tenancy                     = "default"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2778882Z       ^[[32m+^[[0m^[[0m ipv6_association_id                  = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2779348Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block                      = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2779822Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block_network_border_group = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2780307Z       ^[[32m+^[[0m^[[0m main_route_table_id                  = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2780774Z       ^[[32m+^[[0m^[[0m owner_id                             = (known after apply)
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2781429Z       ^[[32m+^[[0m^[[0m tags                                 = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2781816Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-prod-vpc"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2782092Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2782359Z       ^[[32m+^[[0m^[[0m tags_all                             = {
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2782722Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2783066Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2783395Z           ^[[32m+^[[0m^[[0m "Environment" = "prod"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2783748Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-prod-vpc"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2784104Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2784369Z         }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2784542Z     }
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2784647Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2784812Z ^[[1mPlan:^[[0m 10 to add, 0 to change, 0 to destroy.
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2785123Z ^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2785305Z Changes to Outputs:
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2785671Z   ^[[32m+^[[0m^[[0m db_parameter_name  = "/acs730/assignment1/prod/db_password"
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2786075Z   ^[[32m+^[[0m^[[0m db_password_length = 11
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2786341Z ^[[90m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2786841Z ─────────────────────────────────────────────────────────────────────────────^[[0m
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2787159Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2787262Z Saved the plan to: tfplan
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2787450Z 
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2787637Z To perform exactly these actions, run the following command to apply:
+apply-prod	Run terraform plan -input=false -out=tfplan	2026-11-28T02:08:29.2788015Z     terraform apply "tfplan"
+apply-prod	Run terraform apply -input=false tfplan	﻿2026-11-28T02:08:29.3370219Z ##[group]Run terraform apply -input=false tfplan
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3370647Z ^[[36;1mterraform apply -input=false tfplan^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3403917Z shell: /usr/bin/bash -e {0}
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3404189Z env:
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3404402Z   AWS_DEFAULT_REGION: us-east-1
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3404666Z   AWS_REGION: us-east-1
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3405171Z   AWS_ACCESS_KEY_ID: ***
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3405539Z   AWS_SECRET_ACCESS_KEY: ***
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3409202Z   AWS_SESSION_TOKEN: ***
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:29.3409446Z ##[endgroup]
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:31.6065149Z ^[[0m^[[1mmodule.app.aws_vpc.main: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:31.6072863Z ^[[0m^[[1mmodule.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:31.9991613Z ^[[0m^[[1mmodule.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Creation complete after 0s [id=acs730-a1-prod-cpu-high-0]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:41.6076206Z ^[[0m^[[1mmodule.app.aws_vpc.main: Still creating... [10s elapsed]^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.2214817Z ^[[0m^[[1mmodule.app.aws_vpc.main: Creation complete after 11s [id=vpc-06b53f58a090bf249]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.2242026Z ^[[0m^[[1mmodule.app.aws_internet_gateway.main: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.2271054Z ^[[0m^[[1mmodule.app.aws_subnet.public["a"]: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.2272238Z ^[[0m^[[1mmodule.app.aws_subnet.public["b"]: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.2296478Z ^[[0m^[[1mmodule.app.aws_security_group.web: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.6474073Z ^[[0m^[[1mmodule.app.aws_internet_gateway.main: Creation complete after 1s [id=igw-0b5a5eb2500706c14]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:43.6509923Z ^[[0m^[[1mmodule.app.aws_route_table.public: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:44.4846297Z ^[[0m^[[1mmodule.app.aws_route_table.public: Creation complete after 0s [id=rtb-0559d1c709612f608]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:45.9319360Z ^[[0m^[[1mmodule.app.aws_security_group.web: Creation complete after 3s [id=sg-01b8593479ca2b9fa]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:53.2281851Z ^[[0m^[[1mmodule.app.aws_subnet.public["b"]: Still creating... [10s elapsed]^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:53.2283069Z ^[[0m^[[1mmodule.app.aws_subnet.public["a"]: Still creating... [10s elapsed]^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.3602290Z ^[[0m^[[1mmodule.app.aws_subnet.public["b"]: Creation complete after 11s [id=subnet-08db0b19ab2880db0]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.4242129Z ^[[0m^[[1mmodule.app.aws_subnet.public["a"]: Creation complete after 11s [id=subnet-08e4477e7492077b9]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.4269554Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["b"]: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.4271048Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["a"]: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.7341144Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["b"]: Creation complete after 1s [id=rtbassoc-043ed6848619ba710]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.7522269Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["a"]: Creation complete after 1s [id=rtbassoc-0e235c5aa4f08a925]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:08:54.7606943Z ^[[0m^[[1mmodule.app.aws_instance.web[0]: Creating...^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:04.7635917Z ^[[0m^[[1mmodule.app.aws_instance.web[0]: Still creating... [10s elapsed]^[[0m^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.2609322Z ^[[0m^[[1mmodule.app.aws_instance.web[0]: Creation complete after 12s [id=i-0fdb40ba83dcffed7]^[[0m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3872129Z ^[[0m^[[1m^[[32m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3872883Z Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3873699Z ^[[0m^[[0m^[[1m^[[32m
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3873985Z Outputs:
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3874139Z 
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3874446Z ^[[0mdb_parameter_name = "/acs730/assignment1/prod/db_password"
+apply-prod	Run terraform apply -input=false tfplan	2026-11-28T02:09:07.3874955Z db_password_length = 11
+apply-prod	Post Run aws-actions/configure-aws-credentials@v4	﻿2026-11-28T02:09:07.4103620Z Post job cleanup.
+apply-prod	Post Run actions/checkout@v4	﻿2026-11-28T02:09:07.5293298Z Post job cleanup.
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6266422Z [command]/usr/bin/git version
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6318050Z git version 2.56.1
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6362672Z Temporarily overriding HOME='/home/runner/work/_temp/f3926e3d-5f21-41d5-8334-cd16adec9554' before making global git config changes
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6364007Z Adding repository directory to the temporary git global config as a safe directory
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6370009Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6419909Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6465170Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6811744Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6844394Z http.https://github.com/.extraheader
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6858943Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.6906314Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.7246681Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+apply-prod	Post Run actions/checkout@v4	2026-11-28T02:09:07.7298047Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+apply-prod	Complete job	﻿2026-11-28T02:09:07.7744280Z Cleaning up orphan processes
+apply-prod	Complete job	2026-11-28T02:09:07.8249471Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

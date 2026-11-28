@@ -1,0 +1,83 @@
+{
+  "environments": {
+    "total_count": 2,
+    "environments": [
+      {
+        "id": 28811387178,
+        "node_id": "EN_kwDOUfd1TM8AAAAGtUrhKg",
+        "name": "prod",
+        "url": "https://api.github.com/repos/Reios0/acs730-coursework/environments/prod",
+        "html_url": "https://github.com/Reios0/acs730-coursework/deployments/activity_log?environments_filter=prod",
+        "created_at": "2026-11-28T00:13:59Z",
+        "updated_at": "2026-11-28T00:13:59Z",
+        "can_admins_bypass": true,
+        "protection_rules": [
+          {
+            "id": 74304129,
+            "node_id": "GA_kwDOUfd1TM4EbcqB",
+            "type": "branch_policy"
+          },
+          {
+            "id": 74304192,
+            "node_id": "GA_kwDOUfd1TM4EbcrA",
+            "type": "required_reviewers",
+            "prevent_self_review": false,
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "Reios0",
+                  "id": 78562300,
+                  "node_id": "MDQ6VXNlcjc4NTYyMzAw",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/78562300?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/Reios0",
+                  "html_url": "https://github.com/Reios0",
+                  "followers_url": "https://api.github.com/users/Reios0/followers",
+                  "following_url": "https://api.github.com/users/Reios0/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/Reios0/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/Reios0/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/Reios0/subscriptions",
+                  "organizations_url": "https://api.github.com/users/Reios0/orgs",
+                  "repos_url": "https://api.github.com/users/Reios0/repos",
+                  "events_url": "https://api.github.com/users/Reios0/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/Reios0/received_events",
+                  "type": "User",
+                  "user_view_type": "public",
+                  "site_admin": false
+                }
+              }
+            ]
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 28811367476,
+        "node_id": "EN_kwDOUfd1TM8AAAAGtUqUNA",
+        "name": "staging",
+        "url": "https://api.github.com/repos/Reios0/acs730-coursework/environments/staging",
+        "html_url": "https://github.com/Reios0/acs730-coursework/deployments/activity_log?environments_filter=staging",
+        "created_at": "2026-11-28T00:13:35Z",
+        "updated_at": "2026-11-28T00:13:35Z",
+        "can_admins_bypass": true,
+        "protection_rules": [],
+        "deployment_branch_policy": null
+      }
+    ]
+  },
+  "prod_branch_policies": {
+    "total_count": 1,
+    "branch_policies": [
+      {
+        "id": 68569606,
+        "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2ODU2OTYwNg==",
+        "name": "main",
+        "type": "branch"
+      }
+    ]
+  }
+}
