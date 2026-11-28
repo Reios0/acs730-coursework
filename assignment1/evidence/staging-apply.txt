@@ -1,0 +1,552 @@
+apply-staging	Set up job	﻿2026-11-28T01:57:13.7650678Z Current runner version: '2.338.2'
+apply-staging	Set up job	2026-11-28T01:57:13.7671845Z ##[group]Runner Image Provisioner
+apply-staging	Set up job	2026-11-28T01:57:13.7672632Z Hosted Compute Agent
+apply-staging	Set up job	2026-11-28T01:57:13.7673036Z Version: 20261111.635
+apply-staging	Set up job	2026-11-28T01:57:13.7674059Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+apply-staging	Set up job	2026-11-28T01:57:13.7674598Z Build Date: 2026-11-11T01:49:01Z
+apply-staging	Set up job	2026-11-28T01:57:13.7675113Z Worker ID: {f23f5ec7-2c26-4822-869a-7e9cb2587372}
+apply-staging	Set up job	2026-11-28T01:57:13.7675608Z Region: centralus
+apply-staging	Set up job	2026-11-28T01:57:13.7675995Z Cloud: Azure
+apply-staging	Set up job	2026-11-28T01:57:13.7676449Z ##[endgroup]
+apply-staging	Set up job	2026-11-28T01:57:13.7677760Z ##[group]Operating System
+apply-staging	Set up job	2026-11-28T01:57:13.7678445Z Ubuntu
+apply-staging	Set up job	2026-11-28T01:57:13.7678854Z 26.04.1
+apply-staging	Set up job	2026-11-28T01:57:13.7679201Z LTS
+apply-staging	Set up job	2026-11-28T01:57:13.7679642Z ##[endgroup]
+apply-staging	Set up job	2026-11-28T01:57:13.7680057Z ##[group]Runner Image
+apply-staging	Set up job	2026-11-28T01:57:13.7680556Z Image: ubuntu-26.04
+apply-staging	Set up job	2026-11-28T01:57:13.7680955Z Version: 20261122.9.1
+apply-staging	Set up job	2026-11-28T01:57:13.7681634Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+apply-staging	Set up job	2026-11-28T01:57:13.7682871Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+apply-staging	Set up job	2026-11-28T01:57:13.7683561Z ##[endgroup]
+apply-staging	Set up job	2026-11-28T01:57:13.7684328Z ##[group]GITHUB_TOKEN Permissions
+apply-staging	Set up job	2026-11-28T01:57:13.7686056Z Contents: read
+apply-staging	Set up job	2026-11-28T01:57:13.7686477Z Metadata: read
+apply-staging	Set up job	2026-11-28T01:57:13.7686912Z ##[endgroup]
+apply-staging	Set up job	2026-11-28T01:57:13.7688868Z Secret source: Actions
+apply-staging	Set up job	2026-11-28T01:57:13.7689635Z Cache mode: write
+apply-staging	Set up job	2026-11-28T01:57:13.7690351Z Prepare workflow directory
+apply-staging	Set up job	2026-11-28T01:57:13.7997252Z Prepare all required actions
+apply-staging	Set up job	2026-11-28T01:57:13.8034983Z Getting action download info
+apply-staging	Set up job	2026-11-28T01:57:14.0130966Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+apply-staging	Set up job	2026-11-28T01:57:14.0936000Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+apply-staging	Set up job	2026-11-28T01:57:14.4361871Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+apply-staging	Set up job	2026-11-28T01:57:14.8752163Z Complete job name: apply-staging
+apply-staging	Run actions/checkout@v4	﻿2026-11-28T01:57:14.9371846Z ##[group]Run actions/checkout@v4
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9372532Z with:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9372858Z   repository: Reios0/acs730-coursework
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9375456Z   token: ***
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9375750Z   ssh-strict: true
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9376062Z   ssh-user: git
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9376369Z   persist-credentials: true
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9376715Z   clean: true
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9377029Z   sparse-checkout-cone-mode: true
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9377390Z   fetch-depth: 1
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9377914Z   fetch-tags: false
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9378254Z   show-progress: true
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9378603Z   lfs: false
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9378904Z   submodules: false
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9379246Z   set-safe-directory: true
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9379602Z   allow-unsafe-pr-checkout: false
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:14.9380074Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1246368Z Syncing repository: Reios0/acs730-coursework
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1248582Z ##[group]Getting Git version info
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1249430Z Working directory is '/home/runner/work/acs730-coursework/acs730-coursework'
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1250632Z [command]/usr/bin/git version
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1255689Z git version 2.56.1
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1275538Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1281336Z Temporarily overriding HOME='/home/runner/work/_temp/8a2cf877-3fc5-4098-a79a-2cc7792f9620' before making global git config changes
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1282958Z Adding repository directory to the temporary git global config as a safe directory
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1284791Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1344596Z Deleting the contents of '/home/runner/work/acs730-coursework/acs730-coursework'
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1346936Z ##[group]Initializing the repository
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1351127Z [command]/usr/bin/git init /home/runner/work/acs730-coursework/acs730-coursework
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1429766Z hint: Using 'master' as the name for the initial branch. This default branch name
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1431142Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1432208Z hint: to use in all of your new repositories, which will suppress this warning,
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1433049Z hint: call:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1433515Z hint:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1434157Z hint: 	git config --global init.defaultBranch <name>
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1434862Z hint:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1435490Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1436509Z hint: 'development'. The just-created branch can be renamed via this command:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1437315Z hint:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1437888Z hint: 	git branch -m <name>
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1438415Z hint:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1439098Z hint: Disable this message with "git config set advice.defaultBranchName false"
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1440289Z Initialized empty Git repository in /home/runner/work/acs730-coursework/acs730-coursework/.git/
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1448621Z [command]/usr/bin/git remote add origin https://github.com/Reios0/acs730-coursework
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1509148Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1510292Z ##[group]Disabling automatic garbage collection
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1511411Z [command]/usr/bin/git config --local gc.auto 0
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1553746Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1554710Z ##[group]Setting up auth
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1556762Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.1592250Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2003388Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2034272Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2280313Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2313054Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2559483Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2599442Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2601082Z ##[group]Fetching the repository
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.2607541Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +3e738d0b7b9b4dcc47b8e8a04fa47af81d4b6ddd:refs/remotes/origin/main
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6914739Z From https://github.com/Reios0/acs730-coursework
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6917135Z  * [new ref]         3e738d0b7b9b4dcc47b8e8a04fa47af81d4b6ddd -> origin/main
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6920727Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6922114Z ##[group]Determining the checkout info
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6923463Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6924464Z [command]/usr/bin/git sparse-checkout disable
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.6973119Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7003986Z ##[group]Checking out the ref
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7006963Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7140450Z Switched to a new branch 'main'
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7143469Z branch 'main' set up to track 'origin/main'.
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7151391Z ##[endgroup]
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7195158Z [command]/usr/bin/git log -1 --format=%H
+apply-staging	Run actions/checkout@v4	2026-11-28T01:57:15.7219133Z 3e738d0b7b9b4dcc47b8e8a04fa47af81d4b6ddd
+apply-staging	Run aws-actions/configure-aws-credentials@v4	﻿2026-11-28T01:57:15.7612904Z ##[group]Run aws-actions/configure-aws-credentials@v4
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7613920Z with:
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7614815Z   aws-access-key-id: ***
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7615957Z   aws-secret-access-key: ***
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7625771Z   aws-session-token: ***
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7626493Z   aws-region: us-east-1
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7627207Z   audience: sts.amazonaws.com
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7628062Z   output-env-credentials: true
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:15.7628807Z ##[endgroup]
+apply-staging	Run aws-actions/configure-aws-credentials@v4	2026-11-28T01:57:16.0050032Z Proceeding with IAM user credentials
+apply-staging	Run hashicorp/setup-terraform@v3	﻿2026-11-28T01:57:16.0224535Z ##[group]Run hashicorp/setup-terraform@v3
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0225403Z with:
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0225977Z   terraform_version: 1.10.3
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0226689Z   terraform_wrapper: false
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0227480Z   cli_config_credentials_hostname: app.terraform.io
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0228421Z env:
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0229001Z   AWS_DEFAULT_REGION: us-east-1
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0229727Z   AWS_REGION: us-east-1
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0230559Z   AWS_ACCESS_KEY_ID: ***
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0231458Z   AWS_SECRET_ACCESS_KEY: ***
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0240105Z   AWS_SESSION_TOKEN: ***
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.0240771Z ##[endgroup]
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.1256551Z (node:2210) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.1261034Z (Use `node --trace-deprecation ...` to show where the warning was created)
+apply-staging	Run hashicorp/setup-terraform@v3	2026-11-28T01:57:16.3827261Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/5db54e42-dbf1-4e24-a961-eecf989cd532
+apply-staging	Run terraform init -input=false	﻿2026-11-28T01:57:16.8720815Z ##[group]Run terraform init -input=false
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8721145Z ^[[36;1mterraform init -input=false^[[0m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8755198Z shell: /usr/bin/bash -e {0}
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8755401Z env:
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8755541Z   AWS_DEFAULT_REGION: us-east-1
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8755708Z   AWS_REGION: us-east-1
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8756022Z   AWS_ACCESS_KEY_ID: ***
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8756250Z   AWS_SECRET_ACCESS_KEY: ***
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8758479Z   AWS_SESSION_TOKEN: ***
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.8758649Z ##[endgroup]
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:16.9108455Z ^[[0m^[[1mInitializing the backend...^[[0m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3079142Z ^[[0m^[[32m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3079726Z Successfully configured the backend "s3"! Terraform will automatically
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3080230Z use this backend unless the backend configuration changes.^[[0m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3893917Z ^[[0m^[[1mInitializing modules...^[[0m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3917557Z - app in ../modules
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3926227Z ^[[0m^[[1mInitializing provider plugins...^[[0m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.3926954Z - Reusing previous version of hashicorp/aws from the dependency lock file
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:17.6773795Z - Installing hashicorp/aws v5.100.0...
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9769941Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9770216Z 
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9770652Z ^[[0m^[[1m^[[32mTerraform has been successfully initialized!^[[0m^[[32m^[[0m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9771053Z ^[[0m^[[32m
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9771351Z You may now begin working with Terraform. Try running "terraform plan" to see
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9771887Z any changes that are required for your infrastructure. All Terraform commands
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9772250Z should now work.
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9772386Z 
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9772556Z If you ever set or change modules or backend configuration for Terraform,
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9773031Z rerun this command to reinitialize your working directory. If you forget, other
+apply-staging	Run terraform init -input=false	2026-11-28T01:57:22.9773622Z commands will detect it and remind you to do so if necessary.^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	﻿2026-11-28T01:57:22.9845688Z ##[group]Run terraform plan -input=false -out=tfplan
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9846194Z ^[[36;1mterraform plan -input=false -out=tfplan^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9882572Z shell: /usr/bin/bash -e {0}
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9882837Z env:
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9883053Z   AWS_DEFAULT_REGION: us-east-1
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9883309Z   AWS_REGION: us-east-1
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9883873Z   AWS_ACCESS_KEY_ID: ***
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9884221Z   AWS_SECRET_ACCESS_KEY: ***
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9888292Z   AWS_SESSION_TOKEN: ***
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:22.9888730Z ##[endgroup]
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:25.4324626Z ^[[0m^[[1mmodule.app.data.aws_ami.al2023: Reading...^[[0m^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:25.4326324Z ^[[0m^[[1mdata.aws_ssm_parameter.db_password: Reading...^[[0m^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:25.6448345Z ^[[0m^[[1mdata.aws_ssm_parameter.db_password: Read complete after 1s [id=/acs730/assignment1/staging/db_password]^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.0645281Z ^[[0m^[[1mmodule.app.data.aws_ami.al2023: Read complete after 1s [id=ami-02771ddfb8e749b97]^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1850304Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1851103Z Terraform used the selected providers to generate the following execution
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1851621Z plan. Resource actions are indicated with the following symbols:
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1852224Z   ^[[32m+^[[0m create^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1852398Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1852751Z Terraform will perform the following actions:
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1853004Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1853477Z ^[[1m  # module.app.aws_cloudwatch_metric_alarm.cpu_high[0]^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1854003Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_cloudwatch_metric_alarm" "cpu_high" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1854422Z       ^[[32m+^[[0m^[[0m actions_enabled                       = true
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1854869Z       ^[[32m+^[[0m^[[0m alarm_name                            = "acs730-a1-staging-cpu-high-0"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1855322Z       ^[[32m+^[[0m^[[0m arn                                   = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1855778Z       ^[[32m+^[[0m^[[0m comparison_operator                   = "GreaterThanThreshold"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1856269Z       ^[[32m+^[[0m^[[0m evaluate_low_sample_count_percentiles = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1856725Z       ^[[32m+^[[0m^[[0m evaluation_periods                    = 2
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1857159Z       ^[[32m+^[[0m^[[0m id                                    = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1857604Z       ^[[32m+^[[0m^[[0m metric_name                           = "CPUUtilization"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1858200Z       ^[[32m+^[[0m^[[0m namespace                             = "AWS/EC2"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1858613Z       ^[[32m+^[[0m^[[0m period                                = 120
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1859020Z       ^[[32m+^[[0m^[[0m statistic                             = "Average"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1859598Z       ^[[32m+^[[0m^[[0m tags_all                              = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1859965Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1860380Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1860749Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1861188Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1861511Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1861801Z       ^[[32m+^[[0m^[[0m threshold                             = 80
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1862213Z       ^[[32m+^[[0m^[[0m treat_missing_data                    = "missing"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1862530Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1862631Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1862826Z ^[[1m  # module.app.aws_instance.web[0]^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1863263Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_instance" "web" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1863682Z       ^[[32m+^[[0m^[[0m ami                                  = "ami-02771ddfb8e749b97"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1864124Z       ^[[32m+^[[0m^[[0m arn                                  = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1864763Z       ^[[32m+^[[0m^[[0m associate_public_ip_address          = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1865260Z       ^[[32m+^[[0m^[[0m availability_zone                    = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1866365Z       ^[[32m+^[[0m^[[0m cpu_core_count                       = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1866835Z       ^[[32m+^[[0m^[[0m cpu_threads_per_core                 = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1867317Z       ^[[32m+^[[0m^[[0m disable_api_stop                     = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1867973Z       ^[[32m+^[[0m^[[0m disable_api_termination              = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1868468Z       ^[[32m+^[[0m^[[0m ebs_optimized                        = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1869194Z       ^[[32m+^[[0m^[[0m enable_primary_ipv6                  = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1869633Z       ^[[32m+^[[0m^[[0m get_password_data                    = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1870062Z       ^[[32m+^[[0m^[[0m host_id                              = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1870529Z       ^[[32m+^[[0m^[[0m host_resource_group_arn              = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1871008Z       ^[[32m+^[[0m^[[0m iam_instance_profile                 = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1871659Z       ^[[32m+^[[0m^[[0m id                                   = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1872215Z       ^[[32m+^[[0m^[[0m instance_initiated_shutdown_behavior = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1872785Z       ^[[32m+^[[0m^[[0m instance_lifecycle                   = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1873360Z       ^[[32m+^[[0m^[[0m instance_state                       = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1873909Z       ^[[32m+^[[0m^[[0m instance_type                        = "t3.micro"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1874439Z       ^[[32m+^[[0m^[[0m ipv6_address_count                   = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1874965Z       ^[[32m+^[[0m^[[0m ipv6_addresses                       = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1875484Z       ^[[32m+^[[0m^[[0m key_name                             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1875986Z       ^[[32m+^[[0m^[[0m monitoring                           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1876506Z       ^[[32m+^[[0m^[[0m outpost_arn                          = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1877034Z       ^[[32m+^[[0m^[[0m password_data                        = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1877563Z       ^[[32m+^[[0m^[[0m placement_group                      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1878959Z       ^[[32m+^[[0m^[[0m placement_partition_number           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1879427Z       ^[[32m+^[[0m^[[0m primary_network_interface_id         = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1879915Z       ^[[32m+^[[0m^[[0m private_dns                          = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1880375Z       ^[[32m+^[[0m^[[0m private_ip                           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1880837Z       ^[[32m+^[[0m^[[0m public_dns                           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1881294Z       ^[[32m+^[[0m^[[0m public_ip                            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1881781Z       ^[[32m+^[[0m^[[0m secondary_private_ips                = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1882268Z       ^[[32m+^[[0m^[[0m security_groups                      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1882710Z       ^[[32m+^[[0m^[[0m source_dest_check                    = true
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1883152Z       ^[[32m+^[[0m^[[0m spot_instance_request_id             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1883688Z       ^[[32m+^[[0m^[[0m subnet_id                            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1884145Z       ^[[32m+^[[0m^[[0m tags                                 = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1884533Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-web-0"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1884826Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1885112Z       ^[[32m+^[[0m^[[0m tags_all                             = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1885484Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1885833Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1886170Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1886776Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-web-0"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1887135Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1887410Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1887920Z       ^[[32m+^[[0m^[[0m tenancy                              = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1888444Z       ^[[32m+^[[0m^[[0m user_data                            = "a765abc5cea646ea81a225d71d78ef99912e0766"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1889121Z       ^[[32m+^[[0m^[[0m user_data_base64                     = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1889556Z       ^[[32m+^[[0m^[[0m user_data_replace_on_change          = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1890020Z       ^[[32m+^[[0m^[[0m vpc_security_group_ids               = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1890289Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1890524Z       ^[[32m+^[[0m^[[0m capacity_reservation_specification (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1890793Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1890954Z       ^[[32m+^[[0m^[[0m cpu_options (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1891172Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1891346Z       ^[[32m+^[[0m^[[0m ebs_block_device (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1891556Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1891729Z       ^[[32m+^[[0m^[[0m enclave_options (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1891941Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1892122Z       ^[[32m+^[[0m^[[0m ephemeral_block_device (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1892358Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1892553Z       ^[[32m+^[[0m^[[0m instance_market_options (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1892784Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1892967Z       ^[[32m+^[[0m^[[0m maintenance_options (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1893193Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1893362Z       ^[[32m+^[[0m^[[0m metadata_options (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1893578Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1893759Z       ^[[32m+^[[0m^[[0m network_interface (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1893974Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1894165Z       ^[[32m+^[[0m^[[0m private_dns_name_options (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1894401Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1894578Z       ^[[32m+^[[0m^[[0m root_block_device (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1894873Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1894985Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1895191Z ^[[1m  # module.app.aws_internet_gateway.main^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1895619Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_internet_gateway" "main" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1895992Z       ^[[32m+^[[0m^[[0m arn      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1896349Z       ^[[32m+^[[0m^[[0m id       = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1896690Z       ^[[32m+^[[0m^[[0m owner_id = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1897004Z       ^[[32m+^[[0m^[[0m tags     = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1897322Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-igw"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1897603Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1898004Z       ^[[32m+^[[0m^[[0m tags_all = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1898320Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1898661Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1899004Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1899378Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-igw"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1899721Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1899997Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1900255Z       ^[[32m+^[[0m^[[0m vpc_id   = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1900534Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1900644Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1900849Z ^[[1m  # module.app.aws_route_table.public^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1901260Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_route_table" "public" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1901640Z       ^[[32m+^[[0m^[[0m arn              = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1902018Z       ^[[32m+^[[0m^[[0m id               = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1902387Z       ^[[32m+^[[0m^[[0m owner_id         = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1902771Z       ^[[32m+^[[0m^[[0m propagating_vgws = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1903134Z       ^[[32m+^[[0m^[[0m route            = [
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1903426Z           ^[[32m+^[[0m^[[0m {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1903959Z               ^[[32m+^[[0m^[[0m cidr_block                 = "0.0.0.0/0"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1904389Z               ^[[32m+^[[0m^[[0m gateway_id                 = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1904845Z                 ^[[90m# (11 unchanged attributes hidden)^[[0m^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1905148Z             },
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1905347Z         ]
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1905579Z       ^[[32m+^[[0m^[[0m tags             = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1908954Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-public-rt"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1909278Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1909514Z       ^[[32m+^[[0m^[[0m tags_all         = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1909850Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1910200Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1910528Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1910909Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-public-rt"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1911288Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1911539Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1911806Z       ^[[32m+^[[0m^[[0m vpc_id           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1912096Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1912201Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1912470Z ^[[1m  # module.app.aws_route_table_association.public["a"]^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1912972Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_route_table_association" "public" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1913394Z       ^[[32m+^[[0m^[[0m id             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1913832Z       ^[[32m+^[[0m^[[0m route_table_id = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1914211Z       ^[[32m+^[[0m^[[0m subnet_id      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1914497Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1914604Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1914852Z ^[[1m  # module.app.aws_route_table_association.public["b"]^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1915347Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_route_table_association" "public" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1915770Z       ^[[32m+^[[0m^[[0m id             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1916127Z       ^[[32m+^[[0m^[[0m route_table_id = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1916489Z       ^[[32m+^[[0m^[[0m subnet_id      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1916771Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1916880Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1917077Z ^[[1m  # module.app.aws_security_group.web^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1917504Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_security_group" "web" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1918129Z       ^[[32m+^[[0m^[[0m arn                    = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1918514Z       ^[[32m+^[[0m^[[0m description            = "HTTP only"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1918865Z       ^[[32m+^[[0m^[[0m egress                 = [
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1919160Z           ^[[32m+^[[0m^[[0m {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1919435Z               ^[[32m+^[[0m^[[0m cidr_blocks      = [
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1919759Z                   ^[[32m+^[[0m^[[0m "0.0.0.0/0",
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1920010Z                 ]
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1920320Z               ^[[32m+^[[0m^[[0m description      = "Allow all outbound"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1920700Z               ^[[32m+^[[0m^[[0m from_port        = 0
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1921035Z               ^[[32m+^[[0m^[[0m ipv6_cidr_blocks = []
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1921371Z               ^[[32m+^[[0m^[[0m prefix_list_ids  = []
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1921722Z               ^[[32m+^[[0m^[[0m protocol         = "-1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1922061Z               ^[[32m+^[[0m^[[0m security_groups  = []
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1922402Z               ^[[32m+^[[0m^[[0m self             = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1922734Z               ^[[32m+^[[0m^[[0m to_port          = 0
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1922997Z             },
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1923189Z         ]
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1923473Z       ^[[32m+^[[0m^[[0m id                     = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1923825Z       ^[[32m+^[[0m^[[0m ingress                = [
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1924112Z           ^[[32m+^[[0m^[[0m {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1924394Z               ^[[32m+^[[0m^[[0m cidr_blocks      = [
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1924925Z                   ^[[32m+^[[0m^[[0m "0.0.0.0/0",
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1925177Z                 ]
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1925446Z               ^[[32m+^[[0m^[[0m description      = "HTTP"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1925789Z               ^[[32m+^[[0m^[[0m from_port        = 80
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1926109Z               ^[[32m+^[[0m^[[0m ipv6_cidr_blocks = []
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1926440Z               ^[[32m+^[[0m^[[0m prefix_list_ids  = []
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1926778Z               ^[[32m+^[[0m^[[0m protocol         = "tcp"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1944735Z               ^[[32m+^[[0m^[[0m security_groups  = []
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1945174Z               ^[[32m+^[[0m^[[0m self             = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1945521Z               ^[[32m+^[[0m^[[0m to_port          = 80
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1945786Z             },
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1945979Z         ]
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1946288Z       ^[[32m+^[[0m^[[0m name                   = "acs730-a1-staging-web"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1946720Z       ^[[32m+^[[0m^[[0m name_prefix            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1947135Z       ^[[32m+^[[0m^[[0m owner_id               = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1947526Z       ^[[32m+^[[0m^[[0m revoke_rules_on_delete = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1948001Z       ^[[32m+^[[0m^[[0m tags                   = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1948375Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-web-sg"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1948688Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1948948Z       ^[[32m+^[[0m^[[0m tags_all               = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1949318Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1949679Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1950041Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1950457Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-web-sg"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1950833Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1951101Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1951397Z       ^[[32m+^[[0m^[[0m vpc_id                 = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1951698Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1951811Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1952022Z ^[[1m  # module.app.aws_subnet.public["a"]^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1952470Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_subnet" "public" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1952907Z       ^[[32m+^[[0m^[[0m arn                                            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1953369Z       ^[[32m+^[[0m^[[0m assign_ipv6_address_on_creation                = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1953875Z       ^[[32m+^[[0m^[[0m availability_zone                              = "us-east-1a"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1954396Z       ^[[32m+^[[0m^[[0m availability_zone_id                           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1954930Z       ^[[32m+^[[0m^[[0m cidr_block                                     = "10.20.1.0/24"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1955430Z       ^[[32m+^[[0m^[[0m enable_dns64                                   = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1955903Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_a_record_on_launch    = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1956373Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_aaaa_record_on_launch = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1956848Z       ^[[32m+^[[0m^[[0m id                                             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1957364Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block_association_id                 = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1958024Z       ^[[32m+^[[0m^[[0m ipv6_native                                    = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1958480Z       ^[[32m+^[[0m^[[0m map_public_ip_on_launch                        = true
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1958952Z       ^[[32m+^[[0m^[[0m owner_id                                       = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1959480Z       ^[[32m+^[[0m^[[0m private_dns_hostname_type_on_launch            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1959973Z       ^[[32m+^[[0m^[[0m tags                                           = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1960378Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-public-a"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1960898Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1961207Z       ^[[32m+^[[0m^[[0m tags_all                                       = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1961596Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1961942Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1962290Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1962689Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-public-a"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1963079Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1963487Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1963824Z       ^[[32m+^[[0m^[[0m vpc_id                                         = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1964161Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1964270Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1964480Z ^[[1m  # module.app.aws_subnet.public["b"]^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1964885Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_subnet" "public" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1965301Z       ^[[32m+^[[0m^[[0m arn                                            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1965790Z       ^[[32m+^[[0m^[[0m assign_ipv6_address_on_creation                = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1966279Z       ^[[32m+^[[0m^[[0m availability_zone                              = "us-east-1b"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1966813Z       ^[[32m+^[[0m^[[0m availability_zone_id                           = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1967190Z       ^[[32m+^[[0m^[[0m cidr_block                                     = "10.20.2.0/24"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1967466Z       ^[[32m+^[[0m^[[0m enable_dns64                                   = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1967931Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_a_record_on_launch    = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1968215Z       ^[[32m+^[[0m^[[0m enable_resource_name_dns_aaaa_record_on_launch = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1968494Z       ^[[32m+^[[0m^[[0m id                                             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1968801Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block_association_id                 = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1969094Z       ^[[32m+^[[0m^[[0m ipv6_native                                    = false
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1969356Z       ^[[32m+^[[0m^[[0m map_public_ip_on_launch                        = true
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1969644Z       ^[[32m+^[[0m^[[0m owner_id                                       = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1969955Z       ^[[32m+^[[0m^[[0m private_dns_hostname_type_on_launch            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1970240Z       ^[[32m+^[[0m^[[0m tags                                           = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1970498Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-public-b"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1970691Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1970872Z       ^[[32m+^[[0m^[[0m tags_all                                       = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1971109Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1971318Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1971522Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1971763Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-public-b"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1971993Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1972148Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1972350Z       ^[[32m+^[[0m^[[0m vpc_id                                         = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1972550Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1972621Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1972725Z ^[[1m  # module.app.aws_vpc.main^[[0m will be created
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1972956Z ^[[0m  ^[[32m+^[[0m^[[0m resource "aws_vpc" "main" {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1973196Z       ^[[32m+^[[0m^[[0m arn                                  = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1973460Z       ^[[32m+^[[0m^[[0m cidr_block                           = "10.20.0.0/16"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1973734Z       ^[[32m+^[[0m^[[0m default_network_acl_id               = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1974015Z       ^[[32m+^[[0m^[[0m default_route_table_id               = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1974430Z       ^[[32m+^[[0m^[[0m default_security_group_id            = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1974719Z       ^[[32m+^[[0m^[[0m dhcp_options_id                      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1974982Z       ^[[32m+^[[0m^[[0m enable_dns_hostnames                 = true
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1975232Z       ^[[32m+^[[0m^[[0m enable_dns_support                   = true
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1975509Z       ^[[32m+^[[0m^[[0m enable_network_address_usage_metrics = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1975872Z       ^[[32m+^[[0m^[[0m id                                   = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1976126Z       ^[[32m+^[[0m^[[0m instance_tenancy                     = "default"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1976408Z       ^[[32m+^[[0m^[[0m ipv6_association_id                  = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1976690Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block                      = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1976972Z       ^[[32m+^[[0m^[[0m ipv6_cidr_block_network_border_group = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1977262Z       ^[[32m+^[[0m^[[0m main_route_table_id                  = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1977532Z       ^[[32m+^[[0m^[[0m owner_id                             = (known after apply)
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1977888Z       ^[[32m+^[[0m^[[0m tags                                 = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1978124Z           ^[[32m+^[[0m^[[0m "Name" = "acs730-a1-staging-vpc"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1978294Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1978467Z       ^[[32m+^[[0m^[[0m tags_all                             = {
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1978696Z           ^[[32m+^[[0m^[[0m "Assignment"  = "assignment1"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1978903Z           ^[[32m+^[[0m^[[0m "Course"      = "ACS730"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979107Z           ^[[32m+^[[0m^[[0m "Environment" = "staging"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979333Z           ^[[32m+^[[0m^[[0m "Name"        = "acs730-a1-staging-vpc"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979549Z           ^[[32m+^[[0m^[[0m "Owner"       = "kliu106"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979711Z         }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979822Z     }
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979894Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1979994Z ^[[1mPlan:^[[0m 10 to add, 0 to change, 0 to destroy.
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1980177Z ^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1980296Z Changes to Outputs:
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1980520Z   ^[[32m+^[[0m^[[0m db_parameter_name  = "/acs730/assignment1/staging/db_password"
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1980767Z   ^[[32m+^[[0m^[[0m db_password_length = 11
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1980931Z ^[[90m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1981184Z ─────────────────────────────────────────────────────────────────────────────^[[0m
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1981361Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1981431Z Saved the plan to: tfplan
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1981525Z 
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1981638Z To perform exactly these actions, run the following command to apply:
+apply-staging	Run terraform plan -input=false -out=tfplan	2026-11-28T01:57:26.1981859Z     terraform apply "tfplan"
+apply-staging	Run terraform apply -input=false tfplan	﻿2026-11-28T01:57:26.3305368Z ##[group]Run terraform apply -input=false tfplan
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3305644Z ^[[36;1mterraform apply -input=false tfplan^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3333890Z shell: /usr/bin/bash -e {0}
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3334051Z env:
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3334183Z   AWS_DEFAULT_REGION: us-east-1
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3334344Z   AWS_REGION: us-east-1
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3334650Z   AWS_ACCESS_KEY_ID: ***
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3334860Z   AWS_SECRET_ACCESS_KEY: ***
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3336818Z   AWS_SESSION_TOKEN: ***
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:26.3336965Z ##[endgroup]
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:28.4785970Z ^[[0m^[[1mmodule.app.aws_vpc.main: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:28.4801938Z ^[[0m^[[1mmodule.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:28.9118896Z ^[[0m^[[1mmodule.app.aws_cloudwatch_metric_alarm.cpu_high[0]: Creation complete after 1s [id=acs730-a1-staging-cpu-high-0]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:38.4788538Z ^[[0m^[[1mmodule.app.aws_vpc.main: Still creating... [10s elapsed]^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:40.5160718Z ^[[0m^[[1mmodule.app.aws_vpc.main: Creation complete after 13s [id=vpc-09a7a296177abcb95]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:40.5191538Z ^[[0m^[[1mmodule.app.aws_internet_gateway.main: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:40.5192063Z ^[[0m^[[1mmodule.app.aws_subnet.public["a"]: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:40.5201383Z ^[[0m^[[1mmodule.app.aws_subnet.public["b"]: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:40.5212981Z ^[[0m^[[1mmodule.app.aws_security_group.web: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:41.0181699Z ^[[0m^[[1mmodule.app.aws_internet_gateway.main: Creation complete after 0s [id=igw-0ae0cce70d6858568]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:41.0206990Z ^[[0m^[[1mmodule.app.aws_route_table.public: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:42.0848169Z ^[[0m^[[1mmodule.app.aws_route_table.public: Creation complete after 1s [id=rtb-0fc9e59be51dbc4b5]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:43.5808017Z ^[[0m^[[1mmodule.app.aws_security_group.web: Creation complete after 3s [id=sg-01839d2798d8f0e70]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:50.5207016Z ^[[0m^[[1mmodule.app.aws_subnet.public["a"]: Still creating... [10s elapsed]^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:50.5207504Z ^[[0m^[[1mmodule.app.aws_subnet.public["b"]: Still creating... [10s elapsed]^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:51.8130399Z ^[[0m^[[1mmodule.app.aws_subnet.public["b"]: Creation complete after 11s [id=subnet-0cd488ba1a3140eb4]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:53.9853849Z ^[[0m^[[1mmodule.app.aws_subnet.public["a"]: Creation complete after 13s [id=subnet-0de5118ceb9a66515]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:53.9872695Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["a"]: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:53.9873493Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["b"]: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:54.3731421Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["a"]: Creation complete after 0s [id=rtbassoc-0261c796f1eb2e95c]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:54.5184637Z ^[[0m^[[1mmodule.app.aws_route_table_association.public["b"]: Creation complete after 1s [id=rtbassoc-0d3b9647196ab9ff7]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:57:54.5239860Z ^[[0m^[[1mmodule.app.aws_instance.web[0]: Creating...^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:04.5243253Z ^[[0m^[[1mmodule.app.aws_instance.web[0]: Still creating... [10s elapsed]^[[0m^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.5506635Z ^[[0m^[[1mmodule.app.aws_instance.web[0]: Creation complete after 13s [id=i-01591842df64d9db1]^[[0m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8424278Z ^[[0m^[[1m^[[32m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8424713Z Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8425099Z ^[[0m^[[0m^[[1m^[[32m
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8425300Z Outputs:
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8425410Z 
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8425651Z ^[[0mdb_parameter_name = "/acs730/assignment1/staging/db_password"
+apply-staging	Run terraform apply -input=false tfplan	2026-11-28T01:58:07.8426004Z db_password_length = 11
+apply-staging	Post Run aws-actions/configure-aws-credentials@v4	﻿2026-11-28T01:58:07.8622980Z Post job cleanup.
+apply-staging	Post Run actions/checkout@v4	﻿2026-11-28T01:58:07.9458024Z Post job cleanup.
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0100045Z [command]/usr/bin/git version
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0137879Z git version 2.56.1
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0165742Z Temporarily overriding HOME='/home/runner/work/_temp/8428f53f-43b7-4e75-aeca-4e7e3f167a2f' before making global git config changes
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0166579Z Adding repository directory to the temporary git global config as a safe directory
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0168446Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0208011Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0243351Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0900964Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0928216Z http.https://github.com/.extraheader
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0937384Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.0970526Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.1215097Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+apply-staging	Post Run actions/checkout@v4	2026-11-28T01:58:08.1248136Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+apply-staging	Complete job	﻿2026-11-28T01:58:08.1624122Z Cleaning up orphan processes
+apply-staging	Complete job	2026-11-28T01:58:08.1916636Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

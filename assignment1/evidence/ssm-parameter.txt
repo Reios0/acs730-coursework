@@ -1,0 +1,21 @@
+"/acs730/assignment1/prod/db_password"
+{
+    "Name": "/acs730/assignment1/prod/db_password",
+    "Type": "SecureString",
+    "Version": 1
+}
+../dev/main.tf:13:data "aws_ssm_parameter" "db_password" {
+../dev/main.tf:28:  db_password   = data.aws_ssm_parameter.db_password.value
+../dev/outputs.tf:2:  value = data.aws_ssm_parameter.db_password.name
+../dev/outputs.tf:6:  value = nonsensitive(length(data.aws_ssm_parameter.db_password.value))
+grep: ../dev/.terraform/providers/registry.terraform.io/hashicorp/aws/5.100.0/linux_amd64/terraform-provider-aws_v5.100.0_x5: binary file matches
+../staging/main.tf:13:data "aws_ssm_parameter" "db_password" {
+../staging/main.tf:28:  db_password   = data.aws_ssm_parameter.db_password.value
+../staging/outputs.tf:2:  value = data.aws_ssm_parameter.db_password.name
+../staging/outputs.tf:6:  value = nonsensitive(length(data.aws_ssm_parameter.db_password.value))
+grep: ../staging/.terraform/providers/registry.terraform.io/hashicorp/aws/5.100.0/linux_amd64/terraform-provider-aws_v5.100.0_x5: binary file matches
+../prod/main.tf:13:data "aws_ssm_parameter" "db_password" {
+../prod/main.tf:28:  db_password   = data.aws_ssm_parameter.db_password.value
+../prod/outputs.tf:2:  value = data.aws_ssm_parameter.db_password.name
+../prod/outputs.tf:6:  value = nonsensitive(length(data.aws_ssm_parameter.db_password.value))
+grep: ../prod/.terraform/providers/registry.terraform.io/hashicorp/aws/5.100.0/linux_amd64/terraform-provider-aws_v5.100.0_x5: binary file matches
