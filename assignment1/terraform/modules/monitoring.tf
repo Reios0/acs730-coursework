@@ -8,4 +8,5 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high" {
   evaluation_periods  = 2
   threshold           = var.alarm_cpu_threshold
   comparison_operator = "GreaterThanThreshold"
+  dimensions          = { InstanceId = aws_instance.web[count.index].id }
 }
